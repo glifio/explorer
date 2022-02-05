@@ -1,11 +1,10 @@
 import { NextRouter } from 'next/router'
-import { PAGE } from '../../constants'
 
 const requiredUrlParamsWithDefaults = {}
 
 interface NavigationOptions {
   existingQParams: Record<string, string>
-  pageUrl: PAGE
+  pageUrl: string
   urlPathExtension?: string[]
   newQueryParams?: Record<string, any>
   maintainQueryParams?: boolean
