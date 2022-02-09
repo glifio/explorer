@@ -1,6 +1,6 @@
 import { Box, Footer, MessageDetail } from '@glif/react-components'
 import { useRouter } from 'next/router'
-import { PAGE } from '../../constants'
+import { PAGE } from '../constants'
 
 export default function Address() {
   const router = useRouter()
@@ -17,7 +17,7 @@ export default function Address() {
           >
             <MessageDetail
               cid={cid as string}
-              addressHref={(address: string) => `${PAGE.ADDRESS}/${address}`}
+              addressHref={(address: string) => `${PAGE.ACTOR}/${address}`}
             />
           </Box>
         )}

@@ -46,12 +46,22 @@ export default function Landing() {
       e.preventDefault()
       setSearchError('')
 
+      const search = searchTerm.trim()
+
       try {
-        if (validateAddressString(searchTerm)) {
-          navigate(router, { pageUrl: `${PAGE.ADDRESS}/${searchTerm}` })
+        if (validateAddressString(search)) {
+          navigate(router, {
+            pageUrl: PAGE.ACTOR,
+            newQueryParams: { address: search }
+          })
           return
         } else if (CID.parse(searchTerm)) {
-          navigate(router, { pageUrl: `${PAGE.MESSAGE}/${searchTerm}` })
+          navigate(router, {
+            pageUrl: PAGE.MESSAGE,
+            newQueryParams: {
+              cid: search
+            }
+          })
           return
         }
       } catch {

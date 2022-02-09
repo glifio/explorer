@@ -1,6 +1,6 @@
 /* PAGES */
 export enum PAGE {
   LANDING = '/',
-  ADDRESS = '/address',
+  ACTOR = '/actor',
   MESSAGE = '/message'
 }

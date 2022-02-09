@@ -5,7 +5,7 @@ import {
   MessageHistoryTable
 } from '@glif/react-components'
 import { useRouter } from 'next/router'
-import { PAGE } from '../../constants'
+import { PAGE } from '../constants'
 
 export default function Address() {
   const router = useRouter()
@@ -23,8 +23,10 @@ export default function Address() {
             <ActorState address={address as string} />
             <MessageHistoryTable
               address={address as string}
-              addressHref={(address: string) => `${PAGE.ADDRESS}/${address}`}
-              cidHref={(cid: string) => `${PAGE.MESSAGE}/${cid}`}
+              addressHref={(address: string) =>
+                `${PAGE.ACTOR}/?address${address}`
+              }
+              cidHref={(cid: string) => `${PAGE.MESSAGE}/?cid=${cid}`}
             />
           </Box>
         )}

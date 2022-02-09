@@ -10,6 +10,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint-fix": "npm run lint -- --fix",
     "start": "next start",
+    "store-ipfs": "npx @glif/deployment-cli ipfs ./out $WEB3_STORAGE_TOKEN",
     "test": "jest --detectOpenHandles --forceExit",
     "test:watch": "jest --watch",
     "export": "next build && next export",
@@ -34,10 +35,12 @@
     "swr": "^1.2.1"
   },
   "devDependencies": {
+    "@glif/deployment-cli": "^2.0.0-alpha.16",
     "@testing-library/jest-dom": "5.14.1",
     "@testing-library/react": "12.1.2",
     "@testing-library/react-hooks": "7.0.2",
     "@types/jest": "^27.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.10.2",
     "babel-jest": "^27.1.1",
     "babel-plugin-styled-components": "2.0.2",
