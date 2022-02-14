@@ -17,7 +17,9 @@ export default function Address() {
           >
             <MessageDetail
               cid={cid as string}
-              addressHref={(address: string) => `${PAGE.ACTOR}/${address}`}
+              addressHref={(address: string) =>
+                `${PAGE.ACTOR}/?address=${address}`
+              }
             />
           </Box>
         )}
