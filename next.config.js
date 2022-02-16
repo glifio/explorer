@@ -28,10 +28,8 @@ module.exports = (phase) => {
     env: {
       NEXT_PUBLIC_GRAPH_API_URL:
         process.env.GRAPH_API_URL || 'graph.glif.host/query',
-      NEXT_PUBLIC_HOME_HREF:
-        process.env.HOME_HREF || 'https://glif.io',
-      NEXT_PUBLIC_BLOG_HREF:
-        process.env.BLOG_HREF || 'https://glif.io/blog',
+      NEXT_PUBLIC_HOME_HREF: process.env.HOME_HREF || 'https://glif.io',
+      NEXT_PUBLIC_BLOG_HREF: process.env.BLOG_HREF || 'https://glif.io/blog',
       NEXT_PUBLIC_WALLET_HREF:
         process.env.WALLET_HREF || 'https://calibration.wallet.glif.io',
       NEXT_PUBLIC_SAFE_HREF:

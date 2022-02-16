@@ -1,37 +1,28 @@
-import React, { useCallback, useState } from 'react'
+import React, { FormEvent, useCallback, useState } from 'react'
 import { CID } from 'multiformats/cid'
 import {
   AppHeader,
   AppTile,
   Box,
   Footer,
-  LandingPageContainer,
-  LandingPageContentContainer,
-  fontSize,
+  LandingPageOuter,
+  LandingPageInner,
+  LandingPageAppTile,
+  LandingPageContent,
   Label,
-  H2,
   P,
   useNetworkName,
   IconSearch,
   InputLabelBase,
   Button,
-  Card,
-  Input
+  Input,
+  SmartLink
 } from '@glif/react-components'
 import { validateAddressString } from '@glif/filecoin-address'
-import styled from 'styled-components'
 import { useRouter } from 'next/router'
 
-import { ResponsiveWalletTile, ConnectContentContainer } from './Helpers'
 import { navigate } from '../../utils/urlParams'
 import { PAGE } from '../../../constants'
-
-const Form = styled.form`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-`
 
 export default function Landing() {
   const router = useRouter()
@@ -43,7 +34,7 @@ export default function Landing() {
   )
 
   const onSubmit = useCallback(
-    (e: SubmitEvent) => {
+    (e: FormEvent) => {
       e.preventDefault()
       setSearchError('')
 
@@ -74,15 +65,15 @@ export default function Landing() {
 
   return (
     <>
-      <AppHeader
-        homeUrl={process.env.NEXT_PUBLIC_HOME_HREF}
-        blogUrl={process.env.NEXT_PUBLIC_BLOG_HREF}
-        walletUrl={process.env.NEXT_PUBLIC_WALLET_HREF}
-        safeUrl={process.env.NEXT_PUBLIC_SAFE_HREF}
-       />
-      <LandingPageContainer>
-        <LandingPageContentContainer>
-          <ResponsiveWalletTile phishingBannerClosed>
+      <LandingPageOuter>
+        <AppHeader
+          homeUrl={process.env.NEXT_PUBLIC_HOME_HREF}
+          blogUrl={process.env.NEXT_PUBLIC_BLOG_HREF}
+          walletUrl={process.env.NEXT_PUBLIC_WALLET_HREF}
+          safeUrl={process.env.NEXT_PUBLIC_SAFE_HREF}
+        />
+        <LandingPageInner>
+          <LandingPageAppTile>
             <AppTile
               title={
                 networkName && networkName !== 'Mainnet'
@@ -95,137 +86,72 @@ export default function Landing() {
               small={false}
               large
             />
-          </ResponsiveWalletTile>
-          <ConnectContentContainer
-            style={{
-              display: 'flex',
-              alignItems: 'center'
-            }}
-          >
-            <Box>
-              <H2
-                style={{
-                  marginTop: 0,
-                  marginBottom: '1em',
-                  fontWeight: 'normal',
-                  fontSize: fontSize('large'),
-                  lineHeight: '1.3em'
-                }}
-              >
-                Search for an address or a transaction hash
-              </H2>
-              <Card
-                p={0}
-                border={0}
-                width='100%'
-                maxWidth={13}
-                height={7}
+          </LandingPageAppTile>
+          <LandingPageContent>
+            <h2>Search for an address or a transaction hash</h2>
+
+            <form onSubmit={onSubmit}>
+              <Box
                 display='flex'
-                flexDirection='column'
-                justifyContent='space-between'
+                alignItems='center'
+                position='relative'
+                overflow='hidden'
+                maxWidth={13}
                 boxShadow={2}
+                borderRadius={2}
               >
-                <Box
-                  display='flex'
-                  flexDirection='row'
-                  justifyContent='space-between'
-                  flexWrap='wrap'
-                  height='100%'
-                >
-                  <Form onSubmit={onSubmit}>
-                    <Box
-                      position='relative'
-                      display='flex'
-                      alignItems='center'
-                      height='100%'
-                      width='100%'
-                    >
-                      <InputLabelBase
-                        display='none'
-                        htmlFor='check-fil-address'
-                      />
-                      <Input.Base
-                        id='check-fil-address'
-                        width='100%'
-                        flexShrink='1'
-                        pr={8}
-                        pl={3}
-                        height='100%'
-                        overflow='scroll'
-                        value={searchTerm}
-                        onChange={(e) => {
-                          setSearchTerm(e.target.value)
-                        }}
-                      />
-                      {!searchTerm && (
-                        <IconSearch position='absolute' left='3' />
-                      )}
-                      <Button
-                        position='absolute'
-                        right='0'
-                        type='submit'
-                        title='Search'
-                        variant='secondary'
-                        mx={2}
-                        px={4}
-                        disabled={!searchTerm}
-                        bg='transparent'
-                      />
-                    </Box>
-                  </Form>
-                </Box>
-              </Card>
+                <InputLabelBase display='none' htmlFor='check-fil-address' />
+                <Input.Base
+                  id='check-fil-address'
+                  pr={8}
+                  pl={4}
+                  height={7}
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                />
+                {!searchTerm && <IconSearch position='absolute' left={4} />}
+                <Button
+                  position='absolute'
+                  right={2}
+                  px={4}
+                  bg='transparent'
+                  type='submit'
+                  title='Search'
+                  variant='secondary'
+                  disabled={!searchTerm}
+                />
+              </Box>
+            </form>
+
+            {searchError && (
               <Label color='status.fail.background' ml={2} mt={4}>
                 {searchError}
               </Label>
+            )}
 
-              <Box mt={6}>
-                <P
-                  css={`
-                    font-size: ${fontSize('default')};
-                  `}
-                >
-                  Want to load this app directly from IPFS or Filecoin?
-                  <br />
-                  Check our{' '}
-                  <a
-                    href='https://github.com/glifio/explorer/releases'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    release page
-                  </a>
-                </P>
-
-                <P
-                  css={`
-                    font-size: ${fontSize('default')};
-                  `}
-                >
-                  Need help?
-                  <br />
-                  Open a{' '}
-                  <a
-                    href='https://github.com/glifio/explorer/issues/new/choose'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    GitHub issue
-                  </a>{' '}
-                  or hit us up on{' '}
-                  <a
-                    href='https://twitter.com/glifio'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
-                    Twitter
-                  </a>
-                </P>
-              </Box>
+            <Box mt={6} fontSize='1.125rem'>
+              <P>
+                Want to load this app directly from IPFS or Filecoin?
+                <br />
+                Check our&nbsp;
+                <SmartLink href='https://github.com/glifio/explorer/releases'>
+                  release page
+                </SmartLink>
+              </P>
+              <P>
+                Need help?
+                <br />
+                Open a&nbsp;
+                <SmartLink href='https://github.com/glifio/explorer/issues/new/choose'>
+                  GitHub issue
+                </SmartLink>
+                &nbsp;or hit us up on&nbsp;
+                <SmartLink href='https://twitter.com/glifio'>Twitter</SmartLink>
+              </P>
             </Box>
-          </ConnectContentContainer>
-        </LandingPageContentContainer>
-      </LandingPageContainer>
+          </LandingPageContent>
+        </LandingPageInner>
+      </LandingPageOuter>
       <Footer />
     </>
   )
