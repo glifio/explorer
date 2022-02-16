@@ -21,8 +21,8 @@ import {
 import { validateAddressString } from '@glif/filecoin-address'
 import { useRouter } from 'next/router'
 
-import { navigate } from '../../utils/urlParams'
-import { PAGE } from '../../../constants'
+import { navigate } from '../utils/urlParams'
+import { PAGE } from '../../constants'
 
 export default function Landing() {
   const router = useRouter()
