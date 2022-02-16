@@ -67,10 +67,10 @@ export default function Landing() {
     <>
       <LandingPageOuter>
         <AppHeader
-          homeUrl={process.env.NEXT_PUBLIC_HOME_HREF}
-          blogUrl={process.env.NEXT_PUBLIC_BLOG_HREF}
-          walletUrl={process.env.NEXT_PUBLIC_WALLET_HREF}
-          safeUrl={process.env.NEXT_PUBLIC_SAFE_HREF}
+          homeUrl={process.env.NEXT_PUBLIC_HOME_URL}
+          blogUrl={process.env.NEXT_PUBLIC_BLOG_URL}
+          walletUrl={process.env.NEXT_PUBLIC_WALLET_URL}
+          safeUrl={process.env.NEXT_PUBLIC_SAFE_URL}
         />
         <LandingPageInner>
           <LandingPageAppTile>
