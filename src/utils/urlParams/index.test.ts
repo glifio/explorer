@@ -1,5 +1,5 @@
 import { generateRouteWithRequiredUrlParams } from '.'
-import { PAGE } from '../../constants'
+import { PAGE } from '../../../constants'
 
 describe('generateRouteWithRequiredUrlParams', () => {
   test('it does not change the required params when generating navigation urls', () => {
