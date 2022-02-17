@@ -5,6 +5,7 @@ import {
   AppTile,
   Box,
   Footer,
+  PhishingBanner,
   LandingPageOuter,
   LandingPageInner,
   LandingPageAppTile,
@@ -66,6 +67,7 @@ export default function Landing() {
   return (
     <>
       <LandingPageOuter>
+        <PhishingBanner href='https://explorer.glif.io' />
         <AppHeader
           homeUrl={process.env.NEXT_PUBLIC_HOME_URL}
           blogUrl={process.env.NEXT_PUBLIC_BLOG_URL}
