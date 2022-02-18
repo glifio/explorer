@@ -1,0 +1,19 @@
+name = "glif-explorer"
+type = "webpack"
+route = 'dev.glif.link/*'
+zone_id = '28db60a97266a8163a498a6d20046a9e'
+usage_model = ''
+compatibility_flags = []
+workers_dev = true
+site = {bucket = "./out",entry-point = "workers-site"}
+compatibility_date = "2022-02-18"
+
+[env.calibration]
+name = "explorer-calibration"
+vars = { ENVIRONMENT = "calibration" }
+route = 'explorer-calibration.glif.link/*'
+
+[env.mainnet]
+name = "explorer-mainnet"
+vars = { ENVIRONMENT = "production" }
+route = 'explorer.glif.link/*'
