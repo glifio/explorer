@@ -1,7 +1,6 @@
 import {
   AppTile,
-  LandingPageWrapper,
-  LandingPageAppTile,
+  LandingPageColumns,
   LandingPageContent,
   Page,
   SmartLink,
@@ -21,21 +20,19 @@ export default function Landing() {
       walletUrl={process.env.NEXT_PUBLIC_WALLET_URL}
       safeUrl={process.env.NEXT_PUBLIC_SAFE_URL}
     >
-      <LandingPageWrapper>
-        <LandingPageAppTile>
-          <AppTile
-            title={
-              networkName && networkName !== 'Mainnet'
-                ? `Explorer (${networkName})`
-                : 'Explorer'
-            }
-            description='A simple Filecoin analytics UI.'
-            imgSrc='/bg-explorer.jpg'
-            imgSrcHover='/bg-explorer-hover.jpg'
-            small={false}
-            large
-          />
-        </LandingPageAppTile>
+      <LandingPageColumns>
+        <AppTile
+          title={
+            networkName && networkName !== 'Mainnet'
+              ? `Explorer (${networkName})`
+              : 'Explorer'
+          }
+          description='A simple Filecoin analytics UI.'
+          imgSrc='/bg-explorer.jpg'
+          imgSrcHover='/bg-explorer-hover.jpg'
+          small={false}
+          large
+        />
         <LandingPageContent>
           <h2>Search for an address or a transaction hash</h2>
           <SearchBar />
@@ -58,7 +55,7 @@ export default function Landing() {
             <SmartLink href='https://twitter.com/glifio'>Twitter</SmartLink>
           </p>
         </LandingPageContent>
-      </LandingPageWrapper>
+      </LandingPageColumns>
     </Page>
   )
 }
