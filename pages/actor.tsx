@@ -27,16 +27,20 @@ export default function Address() {
         <div></div>
       </TwoColumns>
       {address && (
-        <OneColumn>
-          <ActorState address={address as string} />
-          <MessageHistoryTable
-            address={address as string}
-            addressHref={(address: string) =>
-              `${PAGE.ACTOR}/?address${address}`
-            }
-            cidHref={(cid: string) => `${PAGE.MESSAGE}/?cid=${cid}`}
-          />
-        </OneColumn>
+        <>
+          <OneColumn>
+            <ActorState address={address as string} />
+          </OneColumn>
+          <OneColumn>
+            <MessageHistoryTable
+              address={address as string}
+              addressHref={(address: string) =>
+                `${PAGE.ACTOR}/?address${address}`
+              }
+              cidHref={(cid: string) => `${PAGE.MESSAGE}/?cid=${cid}`}
+            />
+          </OneColumn>
+        </>
       )}
     </Page>
   )
