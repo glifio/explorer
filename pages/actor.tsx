@@ -25,7 +25,7 @@ export default function Address() {
         <OneColumn>
           <h2>
             It seems like you&apos;re looking for an invalid address
-            {address && (
+            {address && isString && (
               <>
                 :<br />
                 {address}
@@ -35,7 +35,7 @@ export default function Address() {
         </OneColumn>
       )}
       <OneColumn>
-        <h3>Search for another address or a transaction hash</h3>
+        <h3>Search for another address or transaction hash</h3>
         <SearchBar />
       </OneColumn>
       {validAddress && (
