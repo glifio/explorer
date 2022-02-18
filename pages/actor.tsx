@@ -19,26 +19,24 @@ export default function Address() {
       walletUrl={process.env.NEXT_PUBLIC_WALLET_URL}
       safeUrl={process.env.NEXT_PUBLIC_SAFE_URL}
     >
+      <TwoColumns>
+        <div>
+          <h2>Search for another address or a transaction hash</h2>
+          <SearchBar />
+        </div>
+        <div></div>
+      </TwoColumns>
       {address && (
-        <>
-          <TwoColumns>
-            <div>
-              <h2>Search for another address or a transaction hash</h2>
-              <SearchBar />
-            </div>
-            <div></div>
-          </TwoColumns>
-          <OneColumn>
-            <ActorState address={address as string} />
-            <MessageHistoryTable
-              address={address as string}
-              addressHref={(address: string) =>
-                `${PAGE.ACTOR}/?address${address}`
-              }
-              cidHref={(cid: string) => `${PAGE.MESSAGE}/?cid=${cid}`}
-            />
-          </OneColumn>
-        </>
+        <OneColumn>
+          <ActorState address={address as string} />
+          <MessageHistoryTable
+            address={address as string}
+            addressHref={(address: string) =>
+              `${PAGE.ACTOR}/?address${address}`
+            }
+            cidHref={(cid: string) => `${PAGE.MESSAGE}/?cid=${cid}`}
+          />
+        </OneColumn>
       )}
     </Page>
   )
