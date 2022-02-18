@@ -1,5 +1,4 @@
 import { FormEvent, useCallback, useState } from 'react'
-import { CID } from 'multiformats/cid'
 import {
   Box,
   Label,
@@ -11,6 +10,7 @@ import {
 import { validateAddressString } from '@glif/filecoin-address'
 import { useRouter } from 'next/router'
 
+import validateCID from '../utils/validateCID'
 import { navigate } from '../utils/urlParams'
 import { PAGE } from '../../constants'
 
@@ -31,18 +31,12 @@ export default function SearchBar() {
           pageUrl: PAGE.ACTOR,
           newQueryParams: { address: search }
         })
-      } else {
-        try {
-          CID.parse(searchTerm)
-          navigate(router, {
-            pageUrl: PAGE.MESSAGE,
-            newQueryParams: {
-              cid: search
-            }
-          })
-        } catch {
-          setSearchError('Invalid search')
-        }
+      } else if (validateCID(search)) {
+        navigate(router, {
+          pageUrl: PAGE.MESSAGE,
+          newQueryParams: { cid: search }
+        })
+        setSearchError('Invalid search')
       }
     },
     [setSearchError, router, searchTerm]
