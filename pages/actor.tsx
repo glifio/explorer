@@ -19,13 +19,10 @@ export default function Address() {
       walletUrl={process.env.NEXT_PUBLIC_WALLET_URL}
       safeUrl={process.env.NEXT_PUBLIC_SAFE_URL}
     >
-      <TwoColumns>
-        <div>
-          <h2>Search for another address or a transaction hash</h2>
-          <SearchBar />
-        </div>
-        <div></div>
-      </TwoColumns>
+      <OneColumn>
+        <h3>Search for another address or a transaction hash</h3>
+        <SearchBar />
+      </OneColumn>
       {address && (
         <>
           <OneColumn>

@@ -56,6 +56,7 @@ export default function SearchBar() {
           alignItems='center'
           position='relative'
           overflow='hidden'
+          maxWidth={13}
           boxShadow={2}
           borderRadius={2}
         >
