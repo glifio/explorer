@@ -7,7 +7,6 @@ import {
   LandingPageAppTile,
   LandingPageContent,
   Label,
-  P,
   Page,
   useNetworkName,
   IconSearch,
@@ -125,26 +124,25 @@ export default function Landing() {
             </Label>
           )}
 
-          <Box mt={6}>
-            <P>
-              Want to load this app directly from IPFS or Filecoin?
-              <br />
-              Check our&nbsp;
-              <SmartLink href='https://github.com/glifio/explorer/releases'>
-                release page
-              </SmartLink>
-            </P>
-            <P>
-              Need help?
-              <br />
-              Open a&nbsp;
-              <SmartLink href='https://github.com/glifio/explorer/issues/new/choose'>
-                GitHub issue
-              </SmartLink>
-              &nbsp;or hit us up on&nbsp;
-              <SmartLink href='https://twitter.com/glifio'>Twitter</SmartLink>
-            </P>
-          </Box>
+          <p>
+            Want to load this app directly from IPFS or Filecoin?
+            <br />
+            Check our&nbsp;
+            <SmartLink href='https://github.com/glifio/explorer/releases'>
+              release page
+            </SmartLink>
+          </p>
+          
+          <p>
+            Need help?
+            <br />
+            Open a&nbsp;
+            <SmartLink href='https://github.com/glifio/explorer/issues/new/choose'>
+              GitHub issue
+            </SmartLink>
+            &nbsp;or hit us up on&nbsp;
+            <SmartLink href='https://twitter.com/glifio'>Twitter</SmartLink>
+          </p>
         </LandingPageContent>
       </LandingPageWrapper>
     </Page>
