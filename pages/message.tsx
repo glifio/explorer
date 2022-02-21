@@ -4,7 +4,7 @@ import { PAGE } from '../constants'
 import SearchBar from '../src/components/SearchBar'
 import validateCID from '../src/utils/validateCID'
 
-export default function Address() {
+export default function Message() {
   const router = useRouter()
   const cid = router?.query?.cid
   const isString = typeof cid === 'string'

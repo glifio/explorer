@@ -25,17 +25,21 @@ export default function SearchBar() {
       setSearchError('')
 
       const search = searchTerm.trim()
-
-      if (validateAddressString(search)) {
-        navigate(router, {
-          pageUrl: PAGE.ACTOR,
-          newQueryParams: { address: search }
-        })
-      } else if (validateCID(search)) {
-        navigate(router, {
-          pageUrl: PAGE.MESSAGE,
-          newQueryParams: { cid: search }
-        })
+      try {
+        if (validateAddressString(search)) {
+          navigate(router, {
+            pageUrl: PAGE.ACTOR,
+            newQueryParams: { address: search }
+          })
+        } else if (validateCID(search)) {
+          navigate(router, {
+            pageUrl: PAGE.MESSAGE,
+            newQueryParams: { cid: search }
+          })
+        } else {
+          setSearchError('Invalid search')
+        }
+      } catch {
         setSearchError('Invalid search')
       }
     },

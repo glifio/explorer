@@ -9,7 +9,7 @@ import { useRouter } from 'next/router'
 import { PAGE } from '../constants'
 import SearchBar from '../src/components/SearchBar'
 
-export default function Address() {
+export default function Actor() {
   const router = useRouter()
   const address = router?.query?.address
   const isString = typeof address === 'string'
