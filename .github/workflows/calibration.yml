@@ -31,6 +31,14 @@ jobs:
           LOTUS_NODE_JSONRPC: 'https://calibration.node.glif.io'
           GRAPH_API_URL: 'graph.glif.host/query'
           COIN_TYPE: 't'
+          HOME_URL: 'https://apps-calibration.glif.link'
+          BLOG_URL: 'https://blog.glif.io'
+          WALLET_URL: 'https://wallet-calibration.glif.link'
+          SAFE_URL: 'https://safe-calibration.glif.link'
+          EXPLORER_URL: 'https://explorer-calibration.glif.link'
+          VERIFIER_URL: 'https://verify-calibration.glif.link'
+          SENTRY_DSN: 'https://d5cec97f452d46f2abd04dffaf425f25@o1126745.ingest.sentry.io/6187874'
+          SENTRY_ENV: 'calibration'
       - run: npm run publish:calibration
         env:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
