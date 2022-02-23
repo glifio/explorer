@@ -28,7 +28,7 @@
     "@glif/logger": "^2.0.0-alpha.16",
     "@glif/react-components": "^2.0.0-alpha.45",
     "multiformats": "^9.6.3",
-    "next": "^12.0.7",
+    "next": "^12.1.0",
     "prop-types": "15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@cloudflare/wrangler": "^1.19.8",
-    "@glif/deployment-cli": "^2.0.0-alpha.16",
+    "@glif/deployment-cli": "^2.0.0-beta.2",
     "@testing-library/jest-dom": "5.14.1",
     "@testing-library/react": "12.1.2",
     "@testing-library/react-hooks": "7.0.2",
