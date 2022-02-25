@@ -27,7 +27,7 @@ module.exports = (phase) => {
     webpack,
     env: {
       NEXT_PUBLIC_GRAPH_API_URL:
-        process.env.GRAPH_API_URL || 'graph.glif.host/query',
+        process.env.GRAPH_API_URL || 'https://graph-calibration.glif.link/',
       NEXT_PUBLIC_HOME_URL: process.env.HOME_URL || 'https://glif.io',
       NEXT_PUBLIC_BLOG_URL: process.env.BLOG_URL || 'https://glif.io/blog',
       NEXT_PUBLIC_WALLET_URL:

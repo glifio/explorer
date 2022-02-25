@@ -57,7 +57,7 @@ jobs:
         run: npm run export
         env:
           LOTUS_NODE_JSONRPC: 'https://calibration.node.glif.io'
-          GRAPH_API_URL: 'graph.glif.host/query'
+          GRAPH_API_URL: 'https://graph-calibration.glif.link/'
           COIN_TYPE: 't'
           HOME_URL: 'https://apps-calibration.glif.link'
           BLOG_URL: 'https://blog.glif.io'
