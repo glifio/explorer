@@ -21,7 +21,7 @@ export default function Actor() {
       walletUrl={process.env.NEXT_PUBLIC_WALLET_URL}
       safeUrl={process.env.NEXT_PUBLIC_SAFE_URL}
     >
-      {!validAddress && (
+      {address && !validAddress && (
         <OneColumn>
           <h2>
             It seems like you&apos;re looking for an invalid address
