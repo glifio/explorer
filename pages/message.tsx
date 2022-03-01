@@ -7,6 +7,7 @@ import validateCID from '../src/utils/validateCID'
 export default function Message() {
   const router = useRouter()
   const cid = router?.query?.cid
+  const height = Number(router?.query?.height) || null
   const isString = typeof cid === 'string'
   const validCID = isString && validateCID(cid)
   return (
@@ -16,7 +17,7 @@ export default function Message() {
       walletUrl={process.env.NEXT_PUBLIC_WALLET_URL}
       safeUrl={process.env.NEXT_PUBLIC_SAFE_URL}
     >
-      {!validCID && (
+      {!!cid && !validCID && (
         <OneColumn>
           <h2>
             It seems like you&apos;re looking for an invalid transaction
@@ -37,6 +38,7 @@ export default function Message() {
         <OneColumn>
           <MessageDetail
             cid={cid as string}
+            height={height}
             addressHref={(address: string) =>
               `${PAGE.ACTOR}/?address=${address}`
             }

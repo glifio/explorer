@@ -8,6 +8,7 @@ import { validateAddressString } from '@glif/filecoin-address'
 import { useRouter } from 'next/router'
 import { PAGE } from '../constants'
 import SearchBar from '../src/components/SearchBar'
+import { generateRouteWithRequiredUrlParams } from '../src/utils/urlParams'
 
 export default function Actor() {
   const router = useRouter()
@@ -49,7 +50,17 @@ export default function Actor() {
               addressHref={(address: string) =>
                 `${PAGE.ACTOR}/?address/?${address}`
               }
-              cidHref={(cid: string) => `${PAGE.MESSAGE}/?cid=${cid}`}
+              cidHref={(cid: string, height?: string) =>
+                generateRouteWithRequiredUrlParams({
+                  pageUrl: PAGE.MESSAGE,
+                  newQueryParams: { height, cid },
+                  existingQParams: { ...router.query } as Record<
+                    string,
+                    string
+                  >,
+                  maintainQueryParams: false
+                })
+              }
             />
           </OneColumn>
         </>
