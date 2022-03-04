@@ -1,4 +1,8 @@
-import { Page, PageProps, ExplorerIconHeaderFooter } from '@glif/react-components'
+import {
+  Page,
+  PageProps,
+  ExplorerIconHeaderFooter
+} from '@glif/react-components'
 
 export default function ExplorerPage({ children, ...rest }: PageProps) {
   return (
