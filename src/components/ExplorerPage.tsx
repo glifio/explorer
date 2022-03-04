@@ -10,16 +10,16 @@ export default function ExplorerPage({ children, ...rest }: PageProps) {
       appIcon={<ExplorerIconHeaderFooter />}
       appHeaderLinks={[
         {
-          title: 'Blog',
-          url: process.env.NEXT_PUBLIC_BLOG_URL
-        },
-        {
           title: 'Wallet',
           url: process.env.NEXT_PUBLIC_WALLET_URL
         },
         {
           title: 'Safe',
           url: process.env.NEXT_PUBLIC_SAFE_URL
+        },
+        {
+          title: 'Blog',
+          url: process.env.NEXT_PUBLIC_BLOG_URL
         }
       ]}
       {...rest}
