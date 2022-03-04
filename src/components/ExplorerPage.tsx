@@ -3,6 +3,7 @@ import {
   PageProps,
   ExplorerIconHeaderFooter
 } from '@glif/react-components'
+import { GLIF_DISCORD } from '../../constants'
 
 export default function ExplorerPage({ children, ...rest }: PageProps) {
   return (
@@ -20,6 +21,10 @@ export default function ExplorerPage({ children, ...rest }: PageProps) {
         {
           title: 'Blog',
           url: process.env.NEXT_PUBLIC_BLOG_URL
+        },
+        {
+          title: 'Discord',
+          url: GLIF_DISCORD
         }
       ]}
       {...rest}
