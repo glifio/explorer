@@ -14,12 +14,7 @@ export default function Landing() {
   )
 
   return (
-    <Page
-      homeUrl={process.env.NEXT_PUBLIC_HOME_URL}
-      blogUrl={process.env.NEXT_PUBLIC_BLOG_URL}
-      walletUrl={process.env.NEXT_PUBLIC_WALLET_URL}
-      safeUrl={process.env.NEXT_PUBLIC_SAFE_URL}
-    >
+    <Page hideAppHeader>
       <LandingPageColumns>
         <AppTile
           title={
