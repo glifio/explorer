@@ -8,7 +8,6 @@ export default function ExplorerPage({ children, ...rest }: PageProps) {
   return (
     <Page
       appIcon={<ExplorerIconHeaderFooter />}
-      appUrl='/'
       appHeaderLinks={[
         {
           title: 'Blog',
