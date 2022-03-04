@@ -1,6 +1,7 @@
-import { MessageDetail, Page, OneColumn } from '@glif/react-components'
+import { MessageDetail, OneColumn } from '@glif/react-components'
 import { useRouter } from 'next/router'
 import { PAGE } from '../constants'
+import ExplorerPage from '../src/components/ExplorerPage'
 import SearchBar from '../src/components/SearchBar'
 import validateCID from '../src/utils/validateCID'
 
@@ -11,12 +12,7 @@ export default function Message() {
   const isString = typeof cid === 'string'
   const validCID = isString && validateCID(cid)
   return (
-    <Page
-      homeUrl={process.env.NEXT_PUBLIC_HOME_URL}
-      blogUrl={process.env.NEXT_PUBLIC_BLOG_URL}
-      walletUrl={process.env.NEXT_PUBLIC_WALLET_URL}
-      safeUrl={process.env.NEXT_PUBLIC_SAFE_URL}
-    >
+    <ExplorerPage>
       {!!cid && !validCID && (
         <OneColumn>
           <h2>
@@ -45,6 +41,6 @@ export default function Message() {
           />
         </OneColumn>
       )}
-    </Page>
+    </ExplorerPage>
   )
 }

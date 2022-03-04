@@ -1,12 +1,12 @@
 import {
   ActorState,
   MessageHistoryTable,
-  Page,
   OneColumn
 } from '@glif/react-components'
 import { validateAddressString } from '@glif/filecoin-address'
 import { useRouter } from 'next/router'
 import { PAGE } from '../constants'
+import ExplorerPage from '../src/components/ExplorerPage'
 import SearchBar from '../src/components/SearchBar'
 import { generateRouteWithRequiredUrlParams } from '../src/utils/urlParams'
 
@@ -16,12 +16,7 @@ export default function Actor() {
   const isString = typeof address === 'string'
   const validAddress = isString && validateAddressString(address)
   return (
-    <Page
-      homeUrl={process.env.NEXT_PUBLIC_HOME_URL}
-      blogUrl={process.env.NEXT_PUBLIC_BLOG_URL}
-      walletUrl={process.env.NEXT_PUBLIC_WALLET_URL}
-      safeUrl={process.env.NEXT_PUBLIC_SAFE_URL}
-    >
+    <ExplorerPage>
       {address && !validAddress && (
         <OneColumn>
           <h2>
@@ -65,6 +60,6 @@ export default function Actor() {
           </OneColumn>
         </>
       )}
-    </Page>
+    </ExplorerPage>
   )
 }
