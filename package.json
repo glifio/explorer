@@ -1,6 +1,6 @@
 {
   "name": "explorer",
-  "version": "0.0.0-1",
+  "version": "0.0.3",
   "engines": {
     "node": ">=12.0.0"
   },
@@ -28,7 +28,7 @@
     "@glif/logger": "^2.0.0-alpha.16",
     "@glif/react-components": "^2.0.0-alpha.51",
     "multiformats": "^9.6.3",
-    "next": "^12.0.7",
+    "next": "^12.1.0",
     "prop-types": "15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@cloudflare/wrangler": "^1.19.8",
-    "@glif/deployment-cli": "^2.0.0-alpha.16",
+    "@glif/deployment-cli": "^2.0.0-beta.2",
     "@testing-library/jest-dom": "5.14.1",
     "@testing-library/react": "12.1.2",
     "@testing-library/react-hooks": "7.0.2",
@@ -48,7 +48,7 @@
     "babel-jest": "^27.1.1",
     "babel-plugin-styled-components": "2.0.2",
     "eslint": "^7.32.0",
-    "eslint-config-next": "11.1.2",
+    "eslint-config-next": "12.1.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "4.0.0",
     "jest": "^27.1.1",
