@@ -42,9 +42,6 @@ export default function Actor() {
           <OneColumn>
             <MessageHistoryTable
               address={address as string}
-              addressHref={(address: string) =>
-                `${PAGE.ACTOR}/?address=${address}`
-              }
               cidHref={(cid: string, height?: string) =>
                 generateRouteWithRequiredUrlParams({
                   pageUrl: PAGE.MESSAGE,
