@@ -31,10 +31,7 @@ export default function Message() {
       </OneColumn>
       {validCID && (
         <OneColumn>
-          <MessageDetail
-            cid={cid as string}
-            height={height}
-          />
+          <MessageDetail cid={cid as string} height={height} />
         </OneColumn>
       )}
     </ExplorerPage>
