@@ -25,7 +25,7 @@
     "@glif/filecoin-address": "latest",
     "@glif/filecoin-message": "^2.0.0-alpha.17",
     "@glif/filecoin-number": "latest",
-    "@glif/logger": "^2.0.0-alpha.16",
+    "@glif/logger": "^2.0.0-beta.7",
     "@glif/react-components": "^2.0.0-alpha.111",
     "multiformats": "^9.6.3",
     "next": "^12.1.0",
