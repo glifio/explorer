@@ -42,7 +42,9 @@ export default function Actor() {
           <OneColumn>
             <MessageHistoryTable
               address={address}
-              cidHref={(cid: string, height?: number) => appendQueryParams(PAGE.MESSAGE, { cid, height })}
+              cidHref={(cid: string, height?: number) =>
+                appendQueryParams(PAGE.MESSAGE, { cid, height })
+              }
             />
           </OneColumn>
         </>

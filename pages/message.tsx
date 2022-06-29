@@ -1,4 +1,9 @@
-import { getQueryParam, validateCID, MessageDetail, OneColumn } from '@glif/react-components'
+import {
+  getQueryParam,
+  validateCID,
+  MessageDetail,
+  OneColumn
+} from '@glif/react-components'
 import { useRouter } from 'next/router'
 import ExplorerPage from '../src/components/ExplorerPage'
 import SearchBar from '../src/components/SearchBar'
