@@ -1,0 +1,739 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IndexPage it renders correctly 1`] = `
+.c12 {
+  min-width: 0;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  max-width: 560px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-shadow: rgba(0,0,0,0.10) 0px 0.7px 2.2px -8px,rgba(0,0,0,0.04) 0px 1.7px 2.4px,rgba(0,0,0,0.106) 0px 3.1px 8.1px,rgba(0,0,0,0.04) 0px 5.6px 12.1px,rgba(0,0,0,0.045) 0px 4.4px 4.8px,rgba(0,0,0,0.05) 0px 15px 41px;
+}
+
+.c13 {
+  display: none;
+}
+
+.c16 {
+  cursor: not-allowed;
+  border: 1px solid #C4C4C4;
+  background-color: #C4C4C4;
+  border-color: #C4C4C4;
+  font-size: 1.125rem;
+  -webkit-transition: 0.18s ease-in-out;
+  transition: 0.18s ease-in-out;
+  border-radius: 4px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  height: 48px;
+  position: absolute;
+  right: 8px;
+  border-width: 1px;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.c16:hover {
+  opacity: 1;
+}
+
+.c15 {
+  position: absolute;
+  left: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+.c18 {
+  width: auto;
+  height: 35px;
+  margin-bottom: 2em;
+}
+
+.c5 {
+  position: relative;
+  font-size: 28px;
+  line-height: 1.3em;
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  cursor: default;
+  pointer-events: none;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+.c8 {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.c6 {
+  color: #fff;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.c9 {
+  z-index: 1;
+  font-size: 26px;
+  line-height: 1.3;
+  pointer-events: none;
+}
+
+.c10 {
+  position: relative;
+  padding: 3rem 1.5rem;
+}
+
+.c10 > *:first-child {
+  margin-top: 0;
+}
+
+.c10 > *:last-child {
+  margin-bottom: 0;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.c4 > *:first-child {
+  height: 250px;
+}
+
+.c11 > p {
+  font-size: 1.125rem;
+}
+
+.c11 > p:first-of-type {
+  margin-top: 3rem;
+}
+
+.c20 {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.c21 {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.c17 {
+  background: #272727;
+  border-radius: 8px;
+  padding: 30px;
+  color: white;
+  position: relative;
+}
+
+.c23 {
+  text-transform: uppercase;
+  display: block;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 10px;
+  gap: 10px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.c1 > * {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.c1 > *:last-child {
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.c2 {
+  min-height: 0;
+}
+
+.c14 {
+  min-width: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 1px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  font-size: 1.125rem;
+  text-align: left;
+  cursor: text;
+  background: #d1ddfa;
+  padding-right: 128px;
+  padding-left: 24px;
+  height: 64px;
+  display: inline-block;
+  width: 100%;
+  border: 0;
+  border-color: #999999;
+}
+
+.c14:hover {
+  background: #bacbf7;
+  cursor: text;
+}
+
+.c14:focus {
+  box-shadow: 0;
+  outline: 0;
+  background: #bacbf7;
+}
+
+@media (min-width:480px) {
+  .c18 {
+    height: 45px;
+  }
+}
+
+@media (min-width:868px) {
+  .c18 {
+    height: 55px;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+  }
+}
+
+@media (min-width:868px) {
+  .c5 {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+@media (max-width:868px) {
+
+}
+
+@media (max-width:480px) {
+
+}
+
+@media (hover:hover) {
+  .c8.hover {
+    opacity: 0;
+    -webkit-animation-name: QSrYq;
+    animation-name: QSrYq;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-transition-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+    transition-timing-function: cubic-bezier(0.215,0.61,0.355,1);
+  }
+}
+
+@media (max-width:480px) {
+  .c7 {
+    padding: 8px;
+  }
+}
+
+@media (min-width:480px) {
+  .c7 {
+    padding: 20px;
+  }
+}
+
+@media (max-width:868px) {
+
+}
+
+@media (max-width:480px) {
+
+}
+
+@media (min-width:868px) {
+
+}
+
+@media (max-width:868px) {
+  .c9 {
+    width: 100%;
+    white-space: normal;
+    font-size: 13px;
+    padding: 15px 5px 0 8px;
+  }
+}
+
+@media (min-width:868px) {
+  .c9 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    padding: 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    border-radius: 10px;
+  }
+}
+
+@media (min-width:868px) {
+  .c10 {
+    padding: 3rem;
+  }
+}
+
+@media (min-width:868px) {
+  .c3 {
+    display: grid;
+    -webkit-align-items: start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width:868px) {
+  .c4 > *:first-child {
+    height: 100%;
+  }
+}
+
+@media (min-width:868px) {
+  .c19 {
+    max-width: 670px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width:868px) {
+  .c22 {
+    margin-top: 2em;
+  }
+}
+
+@media (min-width:868px) {
+  .c23 {
+    margin-top: 1em;
+  }
+}
+
+@media (max-width:868px) {
+  .c23 {
+    margin-top: 5em;
+  }
+}
+
+@media (max-width:868px) {
+
+}
+
+@media (min-width:868px) {
+
+}
+
+@media (min-width:868px) {
+  .c1 {
+    min-height: calc(100vh - 2 * 10px);
+  }
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <div
+      class="c1 c2"
+    >
+      <div
+        class="c3 c4"
+      >
+        <a
+          class="c5"
+          data-testid="app-tile-wrapper"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <div
+            class="c6"
+          >
+            <header
+              class="c7"
+            >
+              <div>
+                <h2
+                  style="font-size: 26px; margin: 0px; opacity: 1; text-decoration: none;"
+                >
+                  Explorer
+                </h2>
+                
+              </div>
+            </header>
+            <img
+              alt=""
+              class="c8 hover"
+              src="/bg-explorer-hover.jpg"
+              title="Explorer"
+            />
+          </div>
+          <div
+            class="c9"
+          >
+            A simple Filecoin analytics UI.
+          </div>
+        </a>
+        <div
+          class="c10 c11"
+        >
+          <h2>
+            Search for an address or a transaction hash
+          </h2>
+          <div>
+            <form>
+              <div
+                class="c12"
+                display="flex"
+                overflow="hidden"
+              >
+                <label
+                  class="c13"
+                  display="none"
+                  for="check-fil-address"
+                />
+                <input
+                  class="c14"
+                  display="inline-block"
+                  height="7"
+                  id="check-fil-address"
+                  value=""
+                  width="100%"
+                />
+                <svg
+                  class="c15"
+                  fill="none"
+                  height="24px"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 21L15 15M17 10C17 10.9193 16.8189 11.8295 16.4672 12.6788C16.1154 13.5281 15.5998 14.2997 14.9497 14.9497C14.2997 15.5998 13.5281 16.1154 12.6788 16.4672C11.8295 16.8189 10.9193 17 10 17C9.08075 17 8.1705 16.8189 7.32122 16.4672C6.47194 16.1154 5.70026 15.5998 5.05025 14.9497C4.40024 14.2997 3.88463 13.5281 3.53284 12.6788C3.18106 11.8295 3 10.9193 3 10C3 8.14348 3.7375 6.36301 5.05025 5.05025C6.36301 3.7375 8.14348 3 10 3C11.8565 3 13.637 3.7375 14.9497 5.05025C16.2625 6.36301 17 8.14348 17 10Z"
+                    stroke="#3F3F46"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    xmlns="http://www.w3.org/2000/svg"
+                  />
+                </svg>
+                <button
+                  class="c16"
+                  disabled=""
+                  font-size="3"
+                  height="6"
+                  type="submit"
+                >
+                  Search
+                </button>
+              </div>
+            </form>
+            
+          </div>
+          <p>
+            Want to load this app directly from IPFS or Filecoin?
+            <br />
+            Check our 
+            <a
+              href="https://github.com/glifio/explorer/releases"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              release page
+            </a>
+          </p>
+          <p>
+            Need help?
+            <br />
+            Open a 
+            <a
+              href="https://github.com/glifio/explorer/issues/new/choose"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              GitHub issue
+            </a>
+             or hit us up on 
+            <a
+              href="https://twitter.com/glifio"
+              rel="noreferrer noopener"
+              target="_blank"
+            >
+              Twitter
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer
+    class="c17"
+  >
+    <svg
+      class="c18"
+      height="71px"
+      version="1.1"
+      viewBox="0 0 52 71"
+      width="52px"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <title>
+        logo-glif
+      </title>
+      <g
+        fill="none"
+        fill-rule="evenodd"
+        id="Page-1"
+        stroke="none"
+        stroke-width="1"
+      >
+        <g
+          fill="#FFFFFF"
+          fill-rule="nonzero"
+          id="logo-glif"
+          transform="translate(-0.000000, 0.000000)"
+        >
+          <path
+            d="M10.4352,26.1836 C10.4352,26.2474 10.4481,26.3105 10.4727,26.3693 C10.4973,26.4281 10.5332,26.4815 10.5785,26.5264 C10.6237,26.5714 10.6773,26.6069 10.7363,26.6312 C10.7952,26.6554 10.8584,26.6675024 10.9222,26.6675024 L50.5292,26.6675024 C50.593,26.6675024 50.6561,26.6554 50.7151,26.6312 C50.7741,26.6069 50.8277,26.5714 50.8729,26.5264 C50.9181,26.4815 50.9541,26.4281 50.9786,26.3693 C51.0032,26.3105 51.0162,26.2474 51.0162,26.1836 L51.0162,10.919 C51.0162,10.8552 51.0032,10.7922 50.9786,10.7333 C50.9541,10.6745 50.9181,10.6211 50.8729,10.5762 C50.8277,10.5313 50.7741,10.4957 50.7151,10.4715 C50.6561,10.4473 50.593,10.4349 50.5292,10.4351 L21.3573,10.4351 C21.2935,10.4349 21.2304,10.4473 21.1714,10.4715 C21.1124,10.4957 21.0588,10.5313 21.0136,10.5762 C20.9683,10.6211 20.9324,10.6745 20.9078,10.7333 C20.8833,10.7922 20.8705,10.8552 20.8703,10.919 L20.8703,15.7485 C20.8705,15.8123 20.8833,15.8753 20.9078,15.9342 C20.9324,15.993 20.9683,16.0464 21.0136,16.0913 C21.0588,16.1362 21.1124,16.1718 21.1714,16.196 C21.2304,16.2202 21.2935,16.2326 21.3573,16.2324 L42.9,16.2324 C43.515,16.2324 44.1048,16.4767 44.5397,16.9116 C44.9746,17.3465 45.2189,17.9363 45.2189,18.5513 C45.2189,19.1663 44.9746,19.7562 44.5397,20.191 C44.1048,20.6259 43.515,20.8702 42.9,20.8702 L18.5514,20.8702 C17.9364,20.8702 17.3465,20.6259 16.9117,20.191 C16.4768,19.7562 16.2325,19.1663 16.2325,18.5513 L16.2325,8.1162 C16.2325,7.50119 16.4768,6.91136 16.9117,6.47648 C17.3465,6.0416 17.9364,5.79729 18.5514,5.79729 L50.5292,5.79729 C50.593,5.79749 50.6561,5.78513 50.7151,5.76093 C50.7741,5.73672 50.8277,5.70113 50.8729,5.6562 C50.9181,5.61127 50.9541,5.55787 50.9786,5.49905 C51.0032,5.44024 51.0162,5.37715 51.0162,5.31341 L51.0162,0.483881 C51.0156,0.355201 50.964,0.232012 50.8727,0.141311 C50.7814,0.0506101 50.6579,0 50.5292,0 L10.9222,0 C10.7935,0 10.67,0.0506101 10.5787,0.141311 C10.4874,0.232012 10.4358,0.355201 10.4352,0.483881 L10.4352,26.1836 Z"
+            id="Path"
+          />
+          <path
+            d="M50.5284,47.6879024 C50.6572,47.6883 50.7809,47.6376 50.8723,47.5468 C50.9638,47.4561 51.0155,47.3328 51.0161,47.204 L51.0161,42.3706 C51.0155,42.2418 50.9638,42.1185 50.8723,42.0278 C50.7809,41.937 50.6572,41.8863 50.5284,41.8866977 L0.487747,41.8866977 C0.358933,41.8863 0.235219,41.937 0.143772,42.0278 C0.0523238001,42.1185 0.000616192051,42.2418 5.25659516e-11,42.3706 L5.25659516e-11,47.2001 C5.25659516e-11,47.2642 0.0122749001,47.3278 0.0367141001,47.387 C0.0611532001,47.4463 0.0970723001,47.5001 0.142404,47.5455 C0.187736,47.5908 0.241586,47.6267 0.300854,47.6512 C0.360122,47.6756 0.423639,47.6881 0.487747,47.6879024 L50.5284,47.6879024 Z"
+            id="Path"
+          />
+          <path
+            d="M50.5284,37.2413054 C50.5921,37.2413054 50.6553,37.2293 50.7143,37.2052 C50.7733,37.1811 50.827,37.1456 50.8723,37.1008 C50.9176,37.0559 50.9536,37.0025 50.9783,36.9438 C51.0029,36.885 51.0161,36.8219 51.0161,36.7582 L51.0161,31.9279 C51.0155,31.7991 50.9638,31.6758 50.8723,31.585 C50.7809,31.4943 50.6572,31.4436 50.5284,31.444 L8.1162,31.444 C7.50119,31.444 6.91136,31.1997 6.47648,30.7648 C6.0416,30.3299 5.79729,29.7401 5.79729,29.1251 L5.79729,0.626417 C5.7977,0.497602 5.74697,0.373889 5.65625,0.282441 C5.56553,0.190993 5.44222,0.139286 5.31341,0.138672 L0.483882,0.138672 C0.355068,0.139286 0.231763,0.190993 0.14104,0.282441 C0.0503165001,0.373889 5.71134251e-11,0.497602 5.71134251e-11,0.626417 L5.71134251e-11,36.7582 C5.71134251e-11,36.8811 0.0473625001,36.9993 0.13218,37.0882 L0.143002,37.0998 C0.187479,37.1443 0.240271,37.1795 0.298363,37.2035 C0.356455,37.2275 0.418707,37.2398 0.481564,37.2397 L50.5284,37.2397 L50.5284,37.2413054 Z"
+            id="Path"
+          />
+          <path
+            d="M0,70.3858 C-0.000684023949,70.4499 0.0112877001,70.5136 0.0352565001,70.573 C0.0592253001,70.6325 0.0947178001,70.6866 0.139691,70.7323 C0.184664,70.778 0.23823,70.8143 0.297306,70.8393 C0.356381,70.8642 0.419799,70.8771 0.48391,70.8774 L5.31344,70.8774 C5.44225,70.8768 5.56556,70.8251 5.65628,70.7337 C5.747,70.6422 5.79773,70.5185 5.79732,70.3897 C5.79732,69.904 5.99024,69.4383 6.33365,69.0949 C6.67706,68.7515 7.14283,68.5585 7.62848,68.5585 L50.5284,68.5585 C50.6572,68.5589 50.7809,68.5082 50.8724,68.4175 C50.9638,68.3268 51.0155,68.2035 51.0161,68.0746 L51.0161,63.2413 C51.0155,63.1124 50.9638,62.9891 50.8724,62.8984 C50.7809,62.8077 50.6572,62.757 50.5284,62.7574 L8.11623,62.7574 C7.50121,62.7574 6.91139,62.5131 6.47651,62.0782 C6.04163,61.6433 5.79732,61.0535 5.79732,60.4385 C5.79732,59.8235 6.04163,59.2336 6.47651,58.7987 C6.91139,58.3639 7.50121,58.1196 8.11623,58.1196 L50.5284,58.1196 C50.6572,58.12 50.7809,58.0692 50.8724,57.9785 C50.9638,57.8878 51.0155,57.7645 51.0161,57.6357 L51.0161,52.8061 C51.0155,52.6773 50.9638,52.554 50.8724,52.4633 C50.7809,52.3726 50.6572,52.3219 50.5284,52.3222977 L0.487775,52.3222977 C0.35896,52.3219 0.235247,52.3726 0.143799,52.4633 C0.0523515001,52.554 0.000643898051,52.6773 0,52.8061 L0,70.3858 Z"
+            id="Path"
+          />
+        </g>
+      </g>
+    </svg>
+    <div
+      class="c19"
+    >
+      <ul
+        class="c20"
+      >
+        <li
+          class="c21"
+        >
+          <a
+            href="https://discord.gg/B9ju5Eu4Rq"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            Discord
+          </a>
+        </li>
+        <li
+          class="c21"
+        >
+          <a
+            href="https://blog.glif.io"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            Blog
+          </a>
+        </li>
+        <li
+          class="c21"
+        >
+          <a
+            href="https://github.com/glifio"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            Code
+          </a>
+        </li>
+        <li
+          class="c21"
+        >
+          <a
+            href="https://lotus.filecoin.io/docs/developers/hosted-lotus/"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            Nodes
+          </a>
+        </li>
+        <li
+          class="c21"
+        >
+          <a
+            href="mailto:squad@glif.io"
+            rel="noreferrer noopener"
+            target="_self"
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+      <ul
+        class="c20"
+      >
+        <li
+          class="c21"
+        >
+          <a
+            href="https://wallet-calibration.glif.link"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            Wallet
+          </a>
+        </li>
+        <li
+          class="c21"
+        >
+          <a
+            href="https://safe-calibration.glif.link"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            Safe
+          </a>
+        </li>
+        <li
+          class="c21"
+        >
+          <a
+            href="https://explorer-calibration.glif.link"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            Explorer
+          </a>
+        </li>
+        <li
+          class="c21"
+        >
+          <a
+            href="https://verify-calibration.glif.link"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            Verifier
+          </a>
+        </li>
+      </ul>
+      <div
+        class="c22"
+      >
+        GLIF
+        <br />
+        Freeport, Grand Bahamas
+      </div>
+      <div
+        class="c23"
+      >
+        2022 Glif for life
+      </div>
+    </div>
+  </footer>
+</div>
+`;
