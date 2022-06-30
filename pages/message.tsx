@@ -11,7 +11,6 @@ import SearchBar from '../src/components/SearchBar'
 export default function Message() {
   const router = useRouter()
   const cid = getQueryParam.string(router, 'cid')
-  const height = getQueryParam.number(router, 'height')
   const validCID = cid && validateCID(cid)
   return (
     <ExplorerPage>
@@ -34,7 +33,7 @@ export default function Message() {
       </OneColumn>
       {validCID && (
         <OneColumn>
-          <MessageDetail cid={cid} height={height} />
+          <MessageDetail cid={cid} />
         </OneColumn>
       )}
     </ExplorerPage>
