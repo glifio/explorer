@@ -14,19 +14,16 @@ import SearchBar from '../src/components/SearchBar'
 export default function Actor() {
   const router = useRouter()
   const address = getQueryParam.string(router, 'address')
-  const validAddress = address && validateAddressString(address)
+  const hasAddress = !!address
+  const validAddress = hasAddress && validateAddressString(address)
   return (
     <ExplorerPage>
-      {!validAddress && (
+      {hasAddress && !validAddress && (
         <OneColumn>
           <h2>
-            It seems like you&apos;re looking for an invalid address
-            {address && (
-              <>
-                :<br />
-                {address}
-              </>
-            )}
+            It seems like you&apos;re looking for an invalid address:
+            <br />
+            {address}
           </h2>
         </OneColumn>
       )}

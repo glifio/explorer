@@ -11,19 +11,16 @@ import SearchBar from '../src/components/SearchBar'
 export default function Message() {
   const router = useRouter()
   const cid = getQueryParam.string(router, 'cid')
-  const validCID = cid && validateCID(cid)
+  const hasCID = !!cid
+  const validCID = hasCID && validateCID(cid)
   return (
     <ExplorerPage>
-      {!validCID && (
+      {hasCID && !validCID && (
         <OneColumn>
           <h2>
-            It seems like you&apos;re looking for an invalid transaction
-            {cid && (
-              <>
-                :<br />
-                {cid}
-              </>
-            )}
+            It seems like you&apos;re looking for an invalid transaction:
+            <br />
+            {cid}
           </h2>
         </OneColumn>
       )}
