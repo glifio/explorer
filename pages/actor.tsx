@@ -45,6 +45,7 @@ export default function Actor() {
               cidHref={(cid: string) =>
                 appendQueryParams(PAGE.MESSAGE, { cid })
               }
+              warnMissingData
             />
           </OneColumn>
         </>
