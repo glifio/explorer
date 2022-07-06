@@ -19,10 +19,6 @@ exports[`IndexPage it renders correctly 1`] = `
   box-shadow: rgba(0,0,0,0.10) 0px 0.7px 2.2px -8px,rgba(0,0,0,0.04) 0px 1.7px 2.4px,rgba(0,0,0,0.106) 0px 3.1px 8.1px,rgba(0,0,0,0.04) 0px 5.6px 12.1px,rgba(0,0,0,0.045) 0px 4.4px 4.8px,rgba(0,0,0,0.05) 0px 15px 41px;
 }
 
-.c13 {
-  display: none;
-}
-
 .c16 {
   cursor: not-allowed;
   border: 1px solid #C4C4C4;
@@ -46,6 +42,10 @@ exports[`IndexPage it renders correctly 1`] = `
 
 .c16:hover {
   opacity: 1;
+}
+
+.c13 {
+  display: none;
 }
 
 .c15 {
