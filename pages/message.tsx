@@ -6,7 +6,6 @@ import {
 } from '@glif/react-components'
 import { useRouter } from 'next/router'
 import ExplorerPage from '../src/components/ExplorerPage'
-import SearchBar from '../src/components/SearchBar'
 
 export default function Message() {
   const router = useRouter()
@@ -24,10 +23,6 @@ export default function Message() {
           </h2>
         </OneColumn>
       )}
-      <OneColumn>
-        <h3>Search for another address or transaction hash</h3>
-        <SearchBar />
-      </OneColumn>
       {validCID && (
         <OneColumn>
           <MessageDetail cid={cid} />
