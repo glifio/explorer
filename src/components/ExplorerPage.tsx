@@ -11,25 +11,27 @@ import { PAGE, GLIF_DISCORD } from '../../constants'
 
 export default function ExplorerPage({ children, ...rest }: PageProps) {
   const router = useRouter()
-  
+
   return (
     <Page
       appIcon={<ExplorerIconHeaderFooter />}
-      customHeaderComps={<SearchAddressMessage
-        hideErrorMessage
-        onSearchAddress={(address) =>
-          navigate(router, {
-            pageUrl: PAGE.ACTOR,
-            params: { address }
-          })
-        }
-        onSearchMessage={(cid) =>
-          navigate(router, {
-            pageUrl: PAGE.MESSAGE,
-            params: { cid }
-          })
-        }
-      />}
+      customHeaderComps={
+        <SearchAddressMessage
+          hideErrorMessage
+          onSearchAddress={(address) =>
+            navigate(router, {
+              pageUrl: PAGE.ACTOR,
+              params: { address }
+            })
+          }
+          onSearchMessage={(cid) =>
+            navigate(router, {
+              pageUrl: PAGE.MESSAGE,
+              params: { cid }
+            })
+          }
+        />
+      }
       appHeaderLinks={[
         {
           title: 'Wallet',
