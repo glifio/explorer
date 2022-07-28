@@ -3,7 +3,8 @@ import {
   getQueryParam,
   ActorState,
   MessageHistoryTable,
-  OneColumn
+  OneColumn,
+  PageTitle
 } from '@glif/react-components'
 import { validateAddressString } from '@glif/filecoin-address'
 import { useRouter } from 'next/router'
@@ -17,16 +18,7 @@ export default function Actor() {
   const validAddress = hasAddress && validateAddressString(address)
   return (
     <ExplorerPage>
-      {hasAddress && !validAddress && (
-        <OneColumn>
-          <h2>
-            It seems like you&apos;re looking for an invalid address:
-            <br />
-            {address}
-          </h2>
-        </OneColumn>
-      )}
-      {validAddress && (
+      {validAddress ? (
         <>
           <OneColumn>
             <ActorState address={address} />
@@ -41,6 +33,20 @@ export default function Actor() {
             />
           </OneColumn>
         </>
+      ) : hasAddress ? (
+        <OneColumn>
+          <PageTitle>
+            It seems like you&apos;re looking for an invalid address
+          </PageTitle>
+          <h3>&ldquo;{address}&rdquo;</h3>
+          <p>Enter another address or message CID in the search bar above</p>
+        </OneColumn>
+      ) : (
+        <OneColumn>
+          <PageTitle>
+            Enter an address or message CID in the search bar above
+          </PageTitle>
+        </OneColumn>
       )}
     </ExplorerPage>
   )
