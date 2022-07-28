@@ -34,7 +34,7 @@ export default function Landing() {
           large
         />
         <LandingPageContent>
-          <h2>Search for an address or a transaction hash</h2>
+          <h2>Search for an address or a message CID</h2>
           <SearchAddressMessage
             large
             onSearchAddress={(address) =>

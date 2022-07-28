@@ -434,7 +434,7 @@ exports[`IndexPage it renders correctly 1`] = `
           class="c10 c11"
         >
           <h2>
-            Search for an address or a transaction hash
+            Search for an address or a message CID
           </h2>
           <div
             class="c12"
