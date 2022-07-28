@@ -61,7 +61,7 @@ module.exports = (phase) => {
               process.env.GRAPH_API_URL || 'graph-calibration.glif.link/query',
             NEXT_PUBLIC_LOTUS_NODE_JSONRPC:
               process.env.LOTUS_NODE_JSONRPC ||
-              'https://calibration.node.glif.io',
+              'https://api.calibration.node.glif.io',
             NEXT_PUBLIC_COIN_TYPE: process.env.COIN_TYPE || 't', // 1'
             NEXT_PUBLIC_IS_PROD: false
           })
