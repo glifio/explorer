@@ -1,61 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`IndexPage it renders correctly 1`] = `
-.c12 {
-  min-width: 0;
-  box-sizing: border-box;
-  position: relative;
-  border-radius: 4px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
-  max-width: 560px;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  box-shadow: rgba(0,0,0,0.10) 0px 0.7px 2.2px -8px,rgba(0,0,0,0.04) 0px 1.7px 2.4px,rgba(0,0,0,0.106) 0px 3.1px 8.1px,rgba(0,0,0,0.04) 0px 5.6px 12.1px,rgba(0,0,0,0.045) 0px 4.4px 4.8px,rgba(0,0,0,0.05) 0px 15px 41px;
-}
-
-.c16 {
-  cursor: not-allowed;
-  border: 1px solid #C4C4C4;
-  background-color: #C4C4C4;
-  border-color: #C4C4C4;
-  font-size: 1.125rem;
-  -webkit-transition: 0.18s ease-in-out;
-  transition: 0.18s ease-in-out;
-  border-radius: 4px;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  height: 48px;
-  position: absolute;
-  right: 8px;
-  border-width: 1px;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.c16:hover {
-  opacity: 1;
-}
-
-.c13 {
-  display: none;
-}
-
-.c15 {
-  position: absolute;
-  left: 24px;
-  width: 24px;
-  height: 24px;
-}
-
-.c18 {
+.c14 {
   width: auto;
   height: 35px;
   margin-bottom: 2em;
@@ -126,6 +72,10 @@ exports[`IndexPage it renders correctly 1`] = `
   padding: 3rem 1.5rem;
 }
 
+.c10:not(:last-child) {
+  padding-bottom: 0;
+}
+
 .c10 > *:first-child {
   margin-top: 0;
 }
@@ -142,7 +92,7 @@ exports[`IndexPage it renders correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--space-m);
 }
 
 .c4 > *:first-child {
@@ -157,19 +107,19 @@ exports[`IndexPage it renders correctly 1`] = `
   margin-top: 3rem;
 }
 
-.c20 {
-  list-style-type: none;
-  margin: 0;
-  padding-left: 0;
-}
-
-.c21 {
+.c16 {
   list-style-type: none;
   margin: 0;
   padding-left: 0;
 }
 
 .c17 {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.c13 {
   background: #272727;
   border-radius: 8px;
   padding: 30px;
@@ -177,7 +127,7 @@ exports[`IndexPage it renders correctly 1`] = `
   position: relative;
 }
 
-.c23 {
+.c19 {
   text-transform: uppercase;
   display: block;
 }
@@ -192,8 +142,8 @@ exports[`IndexPage it renders correctly 1`] = `
   flex-direction: column;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 10px;
-  gap: 10px;
+  padding: var(--space-m);
+  gap: var(--space-m);
 }
 
 .c1 {
@@ -204,7 +154,7 @@ exports[`IndexPage it renders correctly 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--space-m);
 }
 
 .c1 > * {
@@ -223,49 +173,57 @@ exports[`IndexPage it renders correctly 1`] = `
   min-height: 0;
 }
 
-.c14 {
-  min-width: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  padding-left: 8px;
-  padding-right: 8px;
-  border-radius: 1px;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
-  font-size: 1.125rem;
-  text-align: left;
-  cursor: text;
-  background: #d1ddfa;
-  padding-right: 128px;
-  padding-left: 24px;
-  height: 64px;
-  display: inline-block;
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: var(--space-s);
+  -webkit-flex-basis: 40em;
+  -ms-flex-preferred-size: 40em;
+  flex-basis: 40em;
+  gap: var(--space-m);
+}
+
+.c12 form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--space-m);
   width: 100%;
-  border: 0;
-  border-color: #999999;
 }
 
-.c14:hover {
-  background: #bacbf7;
-  cursor: text;
+.c12 input[type='search'] {
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
-.c14:focus {
-  box-shadow: 0;
-  outline: 0;
-  background: #bacbf7;
+.c12 input[type='submit'] {
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  border-radius: 4px;
+}
+
+.c12 span.error {
+  color: var(--red-medium);
+  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 @media (min-width:480px) {
-  .c18 {
+  .c14 {
     height: 45px;
   }
 }
 
 @media (min-width:868px) {
-  .c18 {
+  .c14 {
     height: 55px;
     position: absolute;
     left: 30px;
@@ -306,13 +264,13 @@ exports[`IndexPage it renders correctly 1`] = `
 
 @media (max-width:480px) {
   .c7 {
-    padding: 8px;
+    padding: var(--space-m);
   }
 }
 
 @media (min-width:480px) {
   .c7 {
-    padding: 20px;
+    padding: var(--space-l);
   }
 }
 
@@ -333,7 +291,7 @@ exports[`IndexPage it renders correctly 1`] = `
     width: 100%;
     white-space: normal;
     font-size: 13px;
-    padding: 15px 5px 0 8px;
+    padding: 15px 5px 0 var(--space-m);
   }
 }
 
@@ -345,7 +303,7 @@ exports[`IndexPage it renders correctly 1`] = `
     width: 100%;
     height: 100%;
     color: #fff;
-    padding: 20px;
+    padding: var(--space-l);
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -385,29 +343,29 @@ exports[`IndexPage it renders correctly 1`] = `
 }
 
 @media (min-width:868px) {
-  .c19 {
+  .c15 {
     max-width: 670px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 10px;
+    gap: var(--space-m);
     margin: 0 auto;
   }
 }
 
 @media (max-width:868px) {
-  .c22 {
+  .c18 {
     margin-top: 2em;
   }
 }
 
 @media (min-width:868px) {
-  .c23 {
+  .c19 {
     margin-top: 1em;
   }
 }
 
 @media (max-width:868px) {
-  .c23 {
+  .c19 {
     margin-top: 5em;
   }
 }
@@ -422,7 +380,7 @@ exports[`IndexPage it renders correctly 1`] = `
 
 @media (min-width:868px) {
   .c1 {
-    min-height: calc(100vh - 2 * 10px);
+    min-height: calc(100vh - 2 * var(--space-m));
   }
 }
 
@@ -476,55 +434,26 @@ exports[`IndexPage it renders correctly 1`] = `
           class="c10 c11"
         >
           <h2>
-            Search for an address or a transaction hash
+            Search for an address or a message CID
           </h2>
-          <div>
+          <div
+            class="c12"
+          >
             <form>
-              <div
-                class="c12"
-                display="flex"
-                overflow="hidden"
-              >
-                <label
-                  class="c13"
-                  display="none"
-                  for="check-fil-address"
-                />
-                <input
-                  class="c14"
-                  display="inline-block"
-                  height="7"
-                  id="check-fil-address"
-                  value=""
-                  width="100%"
-                />
-                <svg
-                  class="c15"
-                  fill="none"
-                  height="24px"
-                  viewBox="0 0 24 24"
-                  width="24px"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M21 21L15 15M17 10C17 10.9193 16.8189 11.8295 16.4672 12.6788C16.1154 13.5281 15.5998 14.2997 14.9497 14.9497C14.2997 15.5998 13.5281 16.1154 12.6788 16.4672C11.8295 16.8189 10.9193 17 10 17C9.08075 17 8.1705 16.8189 7.32122 16.4672C6.47194 16.1154 5.70026 15.5998 5.05025 14.9497C4.40024 14.2997 3.88463 13.5281 3.53284 12.6788C3.18106 11.8295 3 10.9193 3 10C3 8.14348 3.7375 6.36301 5.05025 5.05025C6.36301 3.7375 8.14348 3 10 3C11.8565 3 13.637 3.7375 14.9497 5.05025C16.2625 6.36301 17 8.14348 17 10Z"
-                    stroke="#3F3F46"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    xmlns="http://www.w3.org/2000/svg"
-                  />
-                </svg>
-                <button
-                  class="c16"
-                  disabled=""
-                  font-size="3"
-                  height="6"
-                  type="submit"
-                >
-                  Search
-                </button>
-              </div>
+              <input
+                autocomplete="on"
+                class="large"
+                name="search-address-message"
+                placeholder="Enter an address or message CID"
+                type="search"
+                value=""
+              />
+              <input
+                class="large"
+                disabled=""
+                type="submit"
+                value="Search"
+              />
             </form>
             
           </div>
@@ -565,10 +494,10 @@ exports[`IndexPage it renders correctly 1`] = `
     </div>
   </div>
   <footer
-    class="c17"
+    class="c13"
   >
     <svg
-      class="c18"
+      class="c14"
       height="71px"
       version="1.1"
       viewBox="0 0 52 71"
@@ -612,13 +541,13 @@ exports[`IndexPage it renders correctly 1`] = `
       </g>
     </svg>
     <div
-      class="c19"
+      class="c15"
     >
       <ul
-        class="c20"
+        class="c16"
       >
         <li
-          class="c21"
+          class="c17"
         >
           <a
             href="https://discord.gg/B9ju5Eu4Rq"
@@ -629,7 +558,7 @@ exports[`IndexPage it renders correctly 1`] = `
           </a>
         </li>
         <li
-          class="c21"
+          class="c17"
         >
           <a
             href="https://blog.glif.io"
@@ -640,7 +569,7 @@ exports[`IndexPage it renders correctly 1`] = `
           </a>
         </li>
         <li
-          class="c21"
+          class="c17"
         >
           <a
             href="https://github.com/glifio"
@@ -651,7 +580,7 @@ exports[`IndexPage it renders correctly 1`] = `
           </a>
         </li>
         <li
-          class="c21"
+          class="c17"
         >
           <a
             href="https://lotus.filecoin.io/docs/developers/hosted-lotus/"
@@ -662,7 +591,7 @@ exports[`IndexPage it renders correctly 1`] = `
           </a>
         </li>
         <li
-          class="c21"
+          class="c17"
         >
           <a
             href="mailto:squad@infinitescroll.org"
@@ -674,10 +603,10 @@ exports[`IndexPage it renders correctly 1`] = `
         </li>
       </ul>
       <ul
-        class="c20"
+        class="c16"
       >
         <li
-          class="c21"
+          class="c17"
         >
           <a
             href="https://wallet.glif.io"
@@ -688,7 +617,7 @@ exports[`IndexPage it renders correctly 1`] = `
           </a>
         </li>
         <li
-          class="c21"
+          class="c17"
         >
           <a
             href="https://safe.glif.io"
@@ -699,7 +628,7 @@ exports[`IndexPage it renders correctly 1`] = `
           </a>
         </li>
         <li
-          class="c21"
+          class="c17"
         >
           <a
             href="https://explorer.glif.io"
@@ -710,7 +639,7 @@ exports[`IndexPage it renders correctly 1`] = `
           </a>
         </li>
         <li
-          class="c21"
+          class="c17"
         >
           <a
             href="https://verify.glif.io"
@@ -722,14 +651,14 @@ exports[`IndexPage it renders correctly 1`] = `
         </li>
       </ul>
       <div
-        class="c22"
+        class="c18"
       >
         GLIF
         <br />
         Freeport, Grand Bahamas
       </div>
       <div
-        class="c23"
+        class="c19"
       >
         2022 Glif for life
       </div>

@@ -1,14 +1,37 @@
+import { useRouter } from 'next/router'
 import {
+  navigate,
   Page,
   PageProps,
-  ExplorerIconHeaderFooter
+  ExplorerIconHeaderFooter,
+  SearchAddressMessage
 } from '@glif/react-components'
-import { GLIF_DISCORD } from '../../constants'
+
+import { PAGE, GLIF_DISCORD } from '../../constants'
 
 export default function ExplorerPage({ children, ...rest }: PageProps) {
+  const router = useRouter()
+
   return (
     <Page
       appIcon={<ExplorerIconHeaderFooter />}
+      customHeaderComps={
+        <SearchAddressMessage
+          hideErrorMessage
+          onSearchAddress={(address) =>
+            navigate(router, {
+              pageUrl: PAGE.ACTOR,
+              params: { address }
+            })
+          }
+          onSearchMessage={(cid) =>
+            navigate(router, {
+              pageUrl: PAGE.MESSAGE,
+              params: { cid }
+            })
+          }
+        />
+      }
       appHeaderLinks={[
         {
           title: 'Wallet',

@@ -1,14 +1,19 @@
+import { useRouter } from 'next/router'
 import {
+  navigate,
   AppTile,
   LandingPageColumns,
   LandingPageContent,
   Page,
   SmartLink,
+  SearchAddressMessage,
   useNetworkName
 } from '@glif/react-components'
-import SearchBar from './SearchBar'
+
+import { PAGE } from '../../constants'
 
 export default function Landing() {
+  const router = useRouter()
   const { networkName } = useNetworkName(
     process.env.NEXT_PUBLIC_LOTUS_NODE_JSONRPC
   )
@@ -29,8 +34,22 @@ export default function Landing() {
           large
         />
         <LandingPageContent>
-          <h2>Search for an address or a transaction hash</h2>
-          <SearchBar />
+          <h2>Search for an address or a message CID</h2>
+          <SearchAddressMessage
+            large
+            onSearchAddress={(address) =>
+              navigate(router, {
+                pageUrl: PAGE.ACTOR,
+                params: { address }
+              })
+            }
+            onSearchMessage={(cid) =>
+              navigate(router, {
+                pageUrl: PAGE.MESSAGE,
+                params: { cid }
+              })
+            }
+          />
           <p>
             Want to load this app directly from IPFS or Filecoin?
             <br />

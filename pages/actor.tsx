@@ -3,13 +3,18 @@ import {
   getQueryParam,
   ActorState,
   MessageHistoryTable,
-  OneColumn
+  OneColumn,
+  PageTitle
 } from '@glif/react-components'
+import styled from 'styled-components'
 import { validateAddressString } from '@glif/filecoin-address'
 import { useRouter } from 'next/router'
 import { PAGE } from '../constants'
 import ExplorerPage from '../src/components/ExplorerPage'
-import SearchBar from '../src/components/SearchBar'
+
+const Col = styled(OneColumn)`
+  padding-top: var(--space-l);
+`
 
 export default function Actor() {
   const router = useRouter()
@@ -18,25 +23,12 @@ export default function Actor() {
   const validAddress = hasAddress && validateAddressString(address)
   return (
     <ExplorerPage>
-      {hasAddress && !validAddress && (
-        <OneColumn>
-          <h2>
-            It seems like you&apos;re looking for an invalid address:
-            <br />
-            {address}
-          </h2>
-        </OneColumn>
-      )}
-      <OneColumn>
-        <h3>Search for another address or transaction hash</h3>
-        <SearchBar />
-      </OneColumn>
-      {validAddress && (
+      {validAddress ? (
         <>
-          <OneColumn>
+          <Col>
             <ActorState address={address} />
-          </OneColumn>
-          <OneColumn>
+          </Col>
+          <Col>
             <MessageHistoryTable
               address={address}
               cidHref={(cid: string) =>
@@ -44,8 +36,22 @@ export default function Actor() {
               }
               warnMissingData
             />
-          </OneColumn>
+          </Col>
         </>
+      ) : hasAddress ? (
+        <Col>
+          <PageTitle>
+            It seems like you&apos;re looking for an invalid address
+          </PageTitle>
+          <h3>&ldquo;{address}&rdquo;</h3>
+          <p>Enter another address or message CID in the search bar above</p>
+        </Col>
+      ) : (
+        <Col>
+          <PageTitle>
+            Enter an address or message CID in the search bar above
+          </PageTitle>
+        </Col>
       )}
     </ExplorerPage>
   )
