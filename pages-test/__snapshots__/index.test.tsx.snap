@@ -182,9 +182,6 @@ exports[`IndexPage it renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   gap: var(--space-s);
-  -webkit-flex-basis: 40em;
-  -ms-flex-preferred-size: 40em;
-  flex-basis: 40em;
   gap: var(--space-m);
 }
 
