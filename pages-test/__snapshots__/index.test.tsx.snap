@@ -7,66 +7,6 @@ exports[`IndexPage it renders correctly 1`] = `
   margin-bottom: 2em;
 }
 
-.c5 {
-  position: relative;
-  font-size: 28px;
-  line-height: 1.3em;
-  display: block;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: inherit;
-  height: 100%;
-  cursor: default;
-  pointer-events: none;
-  padding-bottom: 0;
-  overflow: hidden;
-}
-
-.c8 {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: contain;
-  object-fit: contain;
-  position: absolute;
-  top: 0;
-}
-
-.c7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-align-items: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
-  align-items: flex-start;
-  position: relative;
-  z-index: 2;
-  font-size: 26px;
-  line-height: 1;
-}
-
-.c6 {
-  color: #fff;
-  background: #000;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.c9 {
-  z-index: 1;
-  font-size: 26px;
-  line-height: 1.3;
-  pointer-events: none;
-}
-
 .c10 {
   position: relative;
   padding: 3rem 1.5rem;
@@ -173,6 +113,66 @@ exports[`IndexPage it renders correctly 1`] = `
   min-height: 0;
 }
 
+.c5 {
+  position: relative;
+  font-size: 28px;
+  line-height: 1.3em;
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  cursor: default;
+  pointer-events: none;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+.c8 {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.c6 {
+  color: #fff;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.c9 {
+  z-index: 1;
+  font-size: 26px;
+  line-height: 1.3;
+  pointer-events: none;
+}
+
 .c12 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -225,6 +225,71 @@ exports[`IndexPage it renders correctly 1`] = `
     position: absolute;
     left: 30px;
     top: 30px;
+  }
+}
+
+@media (min-width:868px) {
+  .c10 {
+    padding: 3rem;
+  }
+}
+
+@media (min-width:868px) {
+  .c3 {
+    display: grid;
+    -webkit-align-items: start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width:868px) {
+  .c4 > *:first-child {
+    height: 100%;
+  }
+}
+
+@media (min-width:868px) {
+  .c15 {
+    max-width: 670px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: var(--space-m);
+    margin: 0 auto;
+  }
+}
+
+@media (max-width:868px) {
+  .c18 {
+    margin-top: 2em;
+  }
+}
+
+@media (min-width:868px) {
+  .c19 {
+    margin-top: 1em;
+  }
+}
+
+@media (max-width:868px) {
+  .c19 {
+    margin-top: 5em;
+  }
+}
+
+@media (max-width:868px) {
+
+}
+
+@media (min-width:868px) {
+
+}
+
+@media (min-width:868px) {
+  .c1 {
+    min-height: calc(100vh - 2 * var(--space-m));
   }
 }
 
@@ -313,71 +378,6 @@ exports[`IndexPage it renders correctly 1`] = `
     -ms-flex-pack: end;
     justify-content: flex-end;
     border-radius: 10px;
-  }
-}
-
-@media (min-width:868px) {
-  .c10 {
-    padding: 3rem;
-  }
-}
-
-@media (min-width:868px) {
-  .c3 {
-    display: grid;
-    -webkit-align-items: start;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: start;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width:868px) {
-  .c4 > *:first-child {
-    height: 100%;
-  }
-}
-
-@media (min-width:868px) {
-  .c15 {
-    max-width: 670px;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: var(--space-m);
-    margin: 0 auto;
-  }
-}
-
-@media (max-width:868px) {
-  .c18 {
-    margin-top: 2em;
-  }
-}
-
-@media (min-width:868px) {
-  .c19 {
-    margin-top: 1em;
-  }
-}
-
-@media (max-width:868px) {
-  .c19 {
-    margin-top: 5em;
-  }
-}
-
-@media (max-width:868px) {
-
-}
-
-@media (min-width:868px) {
-
-}
-
-@media (min-width:868px) {
-  .c1 {
-    min-height: calc(100vh - 2 * var(--space-m));
   }
 }
 
@@ -628,7 +628,7 @@ exports[`IndexPage it renders correctly 1`] = `
           class="c17"
         >
           <a
-            href="https://explorer.glif.io"
+            href="https://explorer-calibration.glif.link"
             rel="noreferrer noopener"
             target="_blank"
           >
