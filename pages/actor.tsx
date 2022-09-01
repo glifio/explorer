@@ -4,7 +4,9 @@ import {
   ActorState,
   MessageHistoryTable,
   OneColumn,
-  PageTitle
+  PageTitle,
+  useEnvironment,
+  Network
 } from '@glif/react-components'
 import styled from 'styled-components'
 import { validateAddressString } from '@glif/filecoin-address'
@@ -21,6 +23,7 @@ export default function Actor() {
   const address = getQueryParam.string(router, 'address')
   const hasAddress = !!address
   const validAddress = hasAddress && validateAddressString(address)
+  const { networkName } = useEnvironment()
   return (
     <ExplorerPage>
       {validAddress ? (
@@ -34,7 +37,7 @@ export default function Actor() {
               cidHref={(cid: string) =>
                 appendQueryParams(PAGE.MESSAGE, { cid })
               }
-              warnMissingData
+              warnMissingData={networkName === Network.MAINNET}
             />
           </Col>
         </>
