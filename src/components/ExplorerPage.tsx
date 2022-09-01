@@ -5,7 +5,8 @@ import {
   Page,
   PageProps,
   ExplorerIconHeaderFooter,
-  SearchAddressMessage
+  SearchAddressMessage,
+  NetworkSelector
 } from '@glif/react-components'
 
 import { PAGE, GLIF_DISCORD } from '../../constants'
@@ -39,6 +40,7 @@ export default function ExplorerPage({ children, ...rest }: PageProps) {
           />
         </SearchBarWrapper>
       }
+      connection={<NetworkSelector enableSwitching />}
       appHeaderLinks={[
         {
           title: 'Wallet',

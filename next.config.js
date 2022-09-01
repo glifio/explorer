@@ -47,21 +47,10 @@ module.exports = (phase) => {
 
       ...(phase === PHASE_PRODUCTION_SERVER || phase === PHASE_PRODUCTION_BUILD
         ? {
-            NEXT_PUBLIC_GRAPH_API_URL:
-              process.env.GRAPH_API_URL || 'graph.glif.link/query',
-            // this api is configured to be load balanced across multiple nodes,
-            // if a single node gets sick, it will get dropped and not accept requests
-            NEXT_PUBLIC_LOTUS_NODE_JSONRPC:
-              process.env.LOTUS_NODE_JSONRPC || 'https://api.node.glif.io',
             NEXT_PUBLIC_COIN_TYPE: process.env.COIN_TYPE || 'f', // 461'
             NEXT_PUBLIC_IS_PROD: true
           }
         : {
-            NEXT_PUBLIC_GRAPH_API_URL:
-              process.env.GRAPH_API_URL || 'graph-calibration.glif.link/query',
-            NEXT_PUBLIC_LOTUS_NODE_JSONRPC:
-              process.env.LOTUS_NODE_JSONRPC ||
-              'https://api.calibration.node.glif.io',
             NEXT_PUBLIC_COIN_TYPE: process.env.COIN_TYPE || 't', // 1'
             NEXT_PUBLIC_IS_PROD: false
           })

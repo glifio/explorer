@@ -7,23 +7,22 @@ import {
   Page,
   SmartLink,
   SearchAddressMessage,
-  useNetworkName
+  Network,
+  useEnvironment
 } from '@glif/react-components'
 
 import { PAGE } from '../../constants'
 
 export default function Landing() {
   const router = useRouter()
-  const { networkName } = useNetworkName(
-    process.env.NEXT_PUBLIC_LOTUS_NODE_JSONRPC
-  )
+  const { networkName } = useEnvironment()
 
   return (
     <Page hideAppHeader>
       <LandingPageColumns>
         <AppTile
           title={
-            networkName && networkName !== 'Mainnet'
+            networkName && networkName !== Network.MAINNET
               ? `Explorer (${networkName})`
               : 'Explorer'
           }

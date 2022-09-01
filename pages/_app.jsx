@@ -3,15 +3,17 @@ import App from 'next/app'
 import Head from 'next/head'
 import Script from 'next/script'
 import React from 'react'
-import { theme, ThemeProvider } from '@glif/react-components'
-import { ApolloProvider } from '@apollo/client'
+import {
+  ApolloWrapper,
+  EnvironmentProvider,
+  theme,
+  ThemeProvider,
+  ErrorBoundary
+} from '@glif/react-components'
 import { SWRConfig } from 'swr'
 
-import { createApolloClient } from '../apolloClient'
-import ErrorBoundary from '../src/components/ErrorBoundary'
+import { ExplorerPage } from '../src/components/ExplorerPage'
 import JSONLD from '../JSONLD'
-
-const apolloClient = createApolloClient()
 
 class MyApp extends App {
   render() {
@@ -55,15 +57,28 @@ class MyApp extends App {
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: JSON.stringify(JSONLD) }}
         />
-        <ApolloProvider client={apolloClient}>
-          <SWRConfig value={{ refreshInterval: 10000 }}>
-            <ThemeProvider theme={theme}>
-              <ErrorBoundary>
-                <Component {...pageProps} />
-              </ErrorBoundary>
-            </ThemeProvider>
-          </SWRConfig>
-        </ApolloProvider>
+        <EnvironmentProvider
+          homeUrl={process.env.NEXT_PUBLIC_HOME_URL}
+          blogUrl={process.env.NEXT_PUBLIC_BLOG_URL}
+          walletUrl={process.env.NEXT_PUBLIC_WALLET_URL}
+          safeUrl={process.env.NEXT_PUBLIC_SAFE_URL}
+          explorerUrl={process.env.NEXT_PUBLIC_EXPLORER_URL}
+          verifierUrl={process.env.NEXT_PUBLIC_VERIFIER_URL}
+          nodeStatusApiUrl='https://api.uptimerobot.com/v2/getMonitors'
+          isProd={false}
+          sentryDsn={process.env.NEXT_PUBLIC_SENTRY_DSN}
+          sentryEnv={process.env.NEXT_PUBLIC_SENTRY_ENV}
+        >
+          <ApolloWrapper>
+            <SWRConfig value={{ refreshInterval: 10000 }}>
+              <ThemeProvider theme={theme}>
+                <ErrorBoundary Wrapper={ExplorerPage}>
+                  <Component {...pageProps} />
+                </ErrorBoundary>
+              </ThemeProvider>
+            </SWRConfig>
+          </ApolloWrapper>
+        </EnvironmentProvider>
       </>
     )
   }
