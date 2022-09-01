@@ -409,7 +409,7 @@ exports[`IndexPage it renders correctly 1`] = `
                 <h2
                   style="font-size: 26px; margin: 0px; opacity: 1; text-decoration: none;"
                 >
-                  Explorer
+                  Explorer (calibration)
                 </h2>
                 
               </div>
@@ -418,7 +418,7 @@ exports[`IndexPage it renders correctly 1`] = `
               alt=""
               class="c8 hover"
               src="/bg-explorer-hover.jpg"
-              title="Explorer"
+              title="Explorer (calibration)"
             />
           </div>
           <div
