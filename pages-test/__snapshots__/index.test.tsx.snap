@@ -9,11 +9,7 @@ exports[`IndexPage it renders correctly 1`] = `
 
 .c10 {
   position: relative;
-  padding: 3rem 1.5rem;
-}
-
-.c10:not(:last-child) {
-  padding-bottom: 0;
+  margin: 3rem 1.5rem;
 }
 
 .c10 > *:first-child {
@@ -115,7 +111,7 @@ exports[`IndexPage it renders correctly 1`] = `
 
 .c5 {
   position: relative;
-  font-size: 28px;
+  font-size: var(--font-size-xl);
   line-height: 1.3em;
   display: block;
   -webkit-text-decoration: none;
@@ -152,7 +148,7 @@ exports[`IndexPage it renders correctly 1`] = `
   align-items: flex-start;
   position: relative;
   z-index: 2;
-  font-size: 26px;
+  font-size: var(--font-size-xl);
   line-height: 1;
 }
 
@@ -168,7 +164,7 @@ exports[`IndexPage it renders correctly 1`] = `
 
 .c9 {
   z-index: 1;
-  font-size: 26px;
+  font-size: var(--font-size-xl);
   line-height: 1.3;
   pointer-events: none;
 }
@@ -230,7 +226,7 @@ exports[`IndexPage it renders correctly 1`] = `
 
 @media (min-width:868px) {
   .c10 {
-    padding: 3rem;
+    margin: 3rem;
   }
 }
 
@@ -352,7 +348,7 @@ exports[`IndexPage it renders correctly 1`] = `
   .c9 {
     width: 100%;
     white-space: normal;
-    font-size: 13px;
+    font-size: 1rem;
     padding: 15px 5px 0 var(--space-m);
   }
 }
@@ -407,7 +403,7 @@ exports[`IndexPage it renders correctly 1`] = `
             >
               <div>
                 <h2
-                  style="font-size: 26px; margin: 0px; opacity: 1; text-decoration: none;"
+                  style="margin: 0px; opacity: 1; text-decoration: none;"
                 >
                   Explorer (calibrationnet)
                 </h2>
