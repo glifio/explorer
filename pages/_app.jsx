@@ -6,8 +6,6 @@ import React from 'react'
 import {
   ApolloWrapper,
   EnvironmentProvider,
-  theme,
-  ThemeProvider,
   ErrorBoundary
 } from '@glif/react-components'
 import { SWRConfig } from 'swr'
@@ -71,11 +69,9 @@ class MyApp extends App {
         >
           <ApolloWrapper>
             <SWRConfig value={{ refreshInterval: 10000 }}>
-              <ThemeProvider theme={theme}>
-                <ErrorBoundary Wrapper={ExplorerPage}>
-                  <Component {...pageProps} />
-                </ErrorBoundary>
-              </ThemeProvider>
+              <ErrorBoundary Wrapper={ExplorerPage}>
+                <Component {...pageProps} />
+              </ErrorBoundary>
             </SWRConfig>
           </ApolloWrapper>
         </EnvironmentProvider>
