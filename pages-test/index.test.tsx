@@ -1,6 +1,5 @@
 import { act, render, RenderResult } from '@testing-library/react'
-import { ThemeProvider } from 'styled-components'
-import { theme, TestEnvironment } from '@glif/react-components'
+import { TestEnvironment } from '@glif/react-components'
 
 import IndexPage from '../pages/index'
 
@@ -13,9 +12,7 @@ describe('IndexPage', () => {
     await act(async () => {
       result = render(
         <TestEnvironment>
-          <ThemeProvider theme={theme}>
-            <IndexPage />
-          </ThemeProvider>
+          <IndexPage />
         </TestEnvironment>
       )
       jest.runAllTimers()
