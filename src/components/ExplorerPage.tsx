@@ -4,7 +4,7 @@ import {
   navigate,
   Page,
   PageProps,
-  ExplorerIconHeaderFooter,
+  IconExplorer,
   SearchAddressMessage,
   NetworkSelector
 } from '@glif/react-components'
@@ -20,7 +20,7 @@ export default function ExplorerPage({ children, ...rest }: PageProps) {
 
   return (
     <Page
-      appIcon={<ExplorerIconHeaderFooter />}
+      appIcon={<IconExplorer />}
       customHeaderComps={
         <SearchBarWrapper>
           <SearchAddressMessage
