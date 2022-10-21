@@ -22,17 +22,19 @@
   "dependencies": {
     "@apollo/client": "^3.6.9",
     "@glif/base-css": "^0.0.33",
-    "@glif/filecoin-address": "^2.0.1",
+    "@glif/filecoin-address": "^2.0.12",
     "@glif/filecoin-message": "^2.0.1",
     "@glif/filecoin-number": "^2.0.5",
     "@glif/logger": "^2.0.1",
     "@glif/react-components": "^2.0.1",
+    "ethers": "^5.7.2",
     "next": "^12.2.3",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "styled-components": "^5.3.5",
-    "swr": "^1.3.0"
+    "swr": "^1.3.0",
+    "wagmi": "^0.7.5"
   },
   "devDependencies": {
     "@glif/deployment-cli": "^2.0.1",

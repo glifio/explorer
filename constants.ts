@@ -2,7 +2,8 @@
 export enum PAGE {
   LANDING = '/',
   ACTOR = '/actor',
-  MESSAGE = '/message'
+  MESSAGE = '/message',
+  ETHEREUM = '/ethereum'
 }
 
 export const GLIF_DISCORD = 'https://discord.gg/B9ju5Eu4Rq'
