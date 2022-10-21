@@ -1,6 +1,6 @@
 {
   "name": "explorer",
-  "version": "0.1.5-calibration.0",
+  "version": "0.1.5",
   "engines": {
     "node": ">=16.0.0"
   },
