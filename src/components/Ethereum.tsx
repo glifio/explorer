@@ -3,10 +3,12 @@ import {
   LabeledText,
   Lines,
   SearchBar,
-  StandardBox
+  StandardBox,
+  useEnvironment
 } from '@glif/react-components'
+import { newDelegatedEthAddress } from '@glif/filecoin-address'
 import styled from 'styled-components'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useAccount, useConnect } from 'wagmi'
 
 const AddressWrapper = styled.span`
@@ -28,37 +30,57 @@ export function Ethereum() {
       f4: string
     }[]
   >(null)
+  const [error, setError] = useState('')
+  const { coinType } = useEnvironment()
 
-  const onSearch = (address) => {
+  const walletf4 = useMemo(() => {
+    if (address) {
+      try {
+        return newDelegatedEthAddress(address, coinType).toString()
+      } catch {
+        return ''
+      }
+    }
+  }, [address, coinType])
+
+  const onSearch = (addr) => {
     setConvertedAddrs((addrs) => {
-      const newEntry = { eth: address, f4: `f410${address}` }
-      if (!addrs) return [newEntry]
-      return [newEntry, ...addrs]
+      setError('')
+      try {
+        const newEntry = {
+          eth: addr,
+          f4: newDelegatedEthAddress(addr, coinType).toString()
+        }
+
+        if (!addrs) return [newEntry]
+        return [newEntry, ...addrs]
+      } catch (err) {
+        setError(err.message || JSON.stringify(err))
+      }
     })
   }
   return (
     <>
       <h3>Convert an Ethereum address to its Filecoin equivalent</h3>
       <Lines>
-        {!!address ? (
-          <ButtonV2 large disabled onClick={() => {}}>
-            Wallet connected
-          </ButtonV2>
-        ) : (
-          <ButtonV2
-            large
-            green
-            onClick={() => connect({ connector: connectors[0] })}
-          >
-            Connect Wallet
-          </ButtonV2>
+        {!address && (
+          <>
+            <ButtonV2
+              large
+              green
+              onClick={() => connect({ connector: connectors[0] })}
+            >
+              Connect Wallet
+            </ButtonV2>
+            <P>Or</P>
+          </>
         )}
-        <P>Or</P>
         <SearchBar
           large
           buttonText='Convert'
           onSearch={onSearch}
           placeholder='0x...'
+          inputError={error}
         />
         <StandardBox>
           {!!address && (
@@ -66,7 +88,7 @@ export function Ethereum() {
               <LabeledText label='Eth address (from MetaMask)' text={address} />
               <LabeledText
                 label='Fil address (from MetaMask)'
-                text={`f410f${address}`}
+                text={walletf4}
               />
             </AddressWrapper>
           )}
