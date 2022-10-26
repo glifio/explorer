@@ -5,10 +5,10 @@ import {
   OneColumn,
   PageTitle,
   useEnvironment,
-  Network
+  Network,
+  isAddress
 } from '@glif/react-components'
 import styled from 'styled-components'
-import { validateAddressString } from '@glif/filecoin-address'
 import { PAGE } from '../../constants'
 import ExplorerPage from './ExplorerPage'
 
@@ -18,7 +18,7 @@ const Col = styled(OneColumn)`
 
 export default function ActorDetail({ address }: ActorDetailProps) {
   const hasAddress = !!address
-  const validAddress = hasAddress && validateAddressString(address)
+  const validAddress = hasAddress && isAddress(address)
   const { networkName } = useEnvironment()
   return (
     <ExplorerPage>
