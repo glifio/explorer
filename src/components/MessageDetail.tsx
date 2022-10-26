@@ -19,13 +19,13 @@ export function MessageDetail({ txID }: MessageProps) {
       ) : hasTxID ? (
         <OneColumn>
           <PageTitle>
-            It seems like you&apos;re looking for an invalid message CID or tx
-            hash
+            It seems like you&apos;re looking for an invalid message CID or
+            transaction hash
           </PageTitle>
           <h3>&ldquo;{txID}&rdquo;</h3>
           <p>
-            Enter another address, message CID, or tx hash in the search bar
-            above
+            Enter another address, message CID, or transaction hash in the
+            search bar above
           </p>
         </OneColumn>
       ) : (

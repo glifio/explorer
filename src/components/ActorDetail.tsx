@@ -43,12 +43,16 @@ export default function ActorDetail({ address }: ActorDetailProps) {
             It seems like you&apos;re looking for an invalid address
           </PageTitle>
           <h3>&ldquo;{address}&rdquo;</h3>
-          <p>Enter another address or message CID in the search bar above</p>
+          <p>
+            Enter another address, message CID, or transaction hash in the
+            search bar above
+          </p>
         </Col>
       ) : (
         <Col>
           <PageTitle>
-            Enter an address or message CID in the search bar above
+            Enter an address, message CID, or transaction hash in the search bar
+            above
           </PageTitle>
         </Col>
       )}
