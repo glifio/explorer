@@ -30,7 +30,7 @@ export default function ActorDetail({ address }: ActorDetailProps) {
           <Col>
             <MessageHistoryTable
               address={address}
-              cidHref={(cid: string) =>
+              txIDHref={(txID: string) =>
                 appendQueryParams(PAGE.MESSAGE, { cid })
               }
               warnMissingData={networkName === Network.MAINNET}
