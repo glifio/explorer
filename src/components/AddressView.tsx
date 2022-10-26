@@ -1,5 +1,4 @@
 import {
-  appendQueryParams,
   ActorState,
   MessageHistoryTable,
   OneColumn,
@@ -16,7 +15,7 @@ const Col = styled(OneColumn)`
   padding-top: var(--space-l);
 `
 
-export const ActorDetail = ({ address }: ActorDetailProps) => {
+export const AddressView = ({ address }: AddressViewProps) => {
   const hasAddress = !!address
   const validAddress = hasAddress && isAddress(address)
   const { networkName } = useEnvironment()
@@ -30,9 +29,7 @@ export const ActorDetail = ({ address }: ActorDetailProps) => {
           <Col>
             <MessageHistoryTable
               address={address}
-              txIDHref={(txID: string) =>
-                appendQueryParams(PAGE.MESSAGE, { cid })
-              }
+              txIDHref={(txID: string) => `${PAGE.TX}/${txID}`}
               warnMissingData={networkName === Network.MAINNET}
             />
           </Col>
@@ -60,6 +57,6 @@ export const ActorDetail = ({ address }: ActorDetailProps) => {
   )
 }
 
-type ActorDetailProps = {
+type AddressViewProps = {
   address: string
 }
