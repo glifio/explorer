@@ -6,7 +6,7 @@ import {
 } from '@glif/react-components'
 import ExplorerPage from './ExplorerPage'
 
-export function Transaction({ txID }: TransactionProps) {
+export function TxView({ txID }: TxViewProps) {
   const hasTxID = !!txID
   const validTxID = hasTxID && isTxID(txID)
   return (
@@ -36,6 +36,6 @@ export function Transaction({ txID }: TransactionProps) {
   )
 }
 
-type TransactionProps = {
+type TxViewProps = {
   txID: string
 }
