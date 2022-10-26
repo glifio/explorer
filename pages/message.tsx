@@ -4,7 +4,6 @@ import { MessageDetail } from '../src/components/MessageDetail'
 
 export default function Message() {
   const router = useRouter()
-  const cid = getQueryParam.string(router, 'cid')
-  const cidOrTxHash = getQueryParam.string(router, 'cidOrTxHash')
-  return <MessageDetail cidOrTxHash={cidOrTxHash || cid} />
+  const txID = getQueryParam.string(router, 'cid')
+  return <MessageDetail txID={txID} />
 }
