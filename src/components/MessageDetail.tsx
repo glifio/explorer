@@ -24,14 +24,14 @@ export function MessageDetail({ txID }: MessageProps) {
           </PageTitle>
           <h3>&ldquo;{txID}&rdquo;</h3>
           <p>
-            Enter another address, message CID, or transaction hash in the
+            Enter another address, message CID or transaction hash in the
             search bar above
           </p>
         </OneColumn>
       ) : (
         <OneColumn>
           <PageTitle>
-            Enter an address, message CID, or tx hash in the search bar above
+            Enter an address, message CID or tx hash in the search bar above
           </PageTitle>
         </OneColumn>
       )}
