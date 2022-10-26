@@ -1,20 +1,19 @@
 import {
-  validateCID,
-  MessageDetail as MessageDetailComp,
+  MessageDetail,
   OneColumn,
-  PageTitle
+  PageTitle,
+  isTxID
 } from '@glif/react-components'
-import { isHexString } from '../utils'
 import ExplorerPage from './ExplorerPage'
 
-export function MessageDetail({ txID }: MessageProps) {
+export function Transaction({ txID }: MessageProps) {
   const hasTxID = !!txID
-  const validTxID = hasTxID && (validateCID(txID) || isHexString(txID))
+  const validTxID = hasTxID && isTxID(txID)
   return (
     <ExplorerPage>
       {validTxID ? (
         <OneColumn>
-          <MessageDetailComp txID={txID} />
+          <MessageDetail txID={txID} />
         </OneColumn>
       ) : hasTxID ? (
         <OneColumn>
