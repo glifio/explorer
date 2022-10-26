@@ -6,38 +6,36 @@ import {
 } from '@glif/react-components'
 import ExplorerPage from './ExplorerPage'
 
-export function Transaction({ txID }: MessageProps) {
+export function Transaction({ txID }: TransactionProps) {
   const hasTxID = !!txID
   const validTxID = hasTxID && isTxID(txID)
   return (
     <ExplorerPage>
-      {validTxID ? (
-        <OneColumn>
+      <OneColumn>
+        {validTxID ? (
           <MessageDetail txID={txID} />
-        </OneColumn>
-      ) : hasTxID ? (
-        <OneColumn>
-          <PageTitle>
-            It seems like you&apos;re looking for an invalid message CID or
-            transaction hash
-          </PageTitle>
-          <h3>&ldquo;{txID}&rdquo;</h3>
-          <p>
-            Enter another address, message CID or transaction hash in the
-            search bar above
-          </p>
-        </OneColumn>
-      ) : (
-        <OneColumn>
+        ) : hasTxID ? (
+          <>
+            <PageTitle>
+              It seems like you&apos;re looking for an invalid message CID or
+              transaction hash
+            </PageTitle>
+            <h3>&ldquo;{txID}&rdquo;</h3>
+            <p>
+              Enter another address, message CID or transaction hash in the
+              search bar above
+            </p>
+          </>
+        ) : (
           <PageTitle>
             Enter an address, message CID or tx hash in the search bar above
           </PageTitle>
-        </OneColumn>
-      )}
+        )}
+      </OneColumn>
     </ExplorerPage>
   )
 }
 
-type MessageProps = {
+type TransactionProps = {
   txID: string
 }
