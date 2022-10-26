@@ -3,5 +3,6 @@ import { MessageDetail } from '../../src/components/MessageDetail'
 
 export default function Message() {
   const router = useRouter()
-  return <MessageDetail txID={(router.query?.txID as string) || ''} />
+  const txID = router.query.txID as string
+  return <MessageDetail txID={txID} />
 }

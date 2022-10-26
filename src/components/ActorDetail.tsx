@@ -16,7 +16,7 @@ const Col = styled(OneColumn)`
   padding-top: var(--space-l);
 `
 
-export default function ActorDetail({ address }: ActorDetailProps) {
+export const ActorDetail = ({ address }: ActorDetailProps) => {
   const hasAddress = !!address
   const validAddress = hasAddress && isAddress(address)
   const { networkName } = useEnvironment()
