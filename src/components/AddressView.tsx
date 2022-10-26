@@ -11,10 +11,6 @@ import styled from 'styled-components'
 import { PAGE } from '../../constants'
 import ExplorerPage from './ExplorerPage'
 
-const Col = styled(OneColumn)`
-  padding-top: var(--space-l);
-`
-
 export const AddressView = ({ address }: AddressViewProps) => {
   const hasAddress = !!address
   const validAddress = hasAddress && isAddress(address)
@@ -23,19 +19,19 @@ export const AddressView = ({ address }: AddressViewProps) => {
     <ExplorerPage>
       {validAddress ? (
         <>
-          <Col>
+          <OneColumn>
             <ActorState address={address} />
-          </Col>
-          <Col>
+          </OneColumn>
+          <OneColumn>
             <MessageHistoryTable
               address={address}
               txIDHref={(txID: string) => `${PAGE.TX}/${txID}`}
               warnMissingData={networkName === Network.MAINNET}
             />
-          </Col>
+          </OneColumn>
         </>
       ) : hasAddress ? (
-        <Col>
+        <OneColumn>
           <PageTitle>
             It seems like you&apos;re looking for an invalid address
           </PageTitle>
@@ -44,14 +40,14 @@ export const AddressView = ({ address }: AddressViewProps) => {
             Enter another address, message CID, or transaction hash in the
             search bar above
           </p>
-        </Col>
+        </OneColumn>
       ) : (
-        <Col>
+        <OneColumn>
           <PageTitle>
             Enter an address, message CID, or transaction hash in the search bar
             above
           </PageTitle>
-        </Col>
+        </OneColumn>
       )}
     </ExplorerPage>
   )
