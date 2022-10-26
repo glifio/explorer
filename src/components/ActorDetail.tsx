@@ -1,6 +1,5 @@
 import {
   appendQueryParams,
-  getQueryParam,
   ActorState,
   MessageHistoryTable,
   OneColumn,
@@ -10,17 +9,14 @@ import {
 } from '@glif/react-components'
 import styled from 'styled-components'
 import { validateAddressString } from '@glif/filecoin-address'
-import { useRouter } from 'next/router'
-import { PAGE } from '../constants'
-import ExplorerPage from '../src/components/ExplorerPage'
+import { PAGE } from '../../constants'
+import ExplorerPage from './ExplorerPage'
 
 const Col = styled(OneColumn)`
   padding-top: var(--space-l);
 `
 
-export default function Actor() {
-  const router = useRouter()
-  const address = getQueryParam.string(router, 'address')
+export default function ActorDetail({ address }: ActorDetailProps) {
   const hasAddress = !!address
   const validAddress = hasAddress && validateAddressString(address)
   const { networkName } = useEnvironment()
@@ -58,4 +54,8 @@ export default function Actor() {
       )}
     </ExplorerPage>
   )
+}
+
+type ActorDetailProps = {
+  address: string
 }
