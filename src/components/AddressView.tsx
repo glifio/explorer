@@ -7,7 +7,6 @@ import {
   Network,
   isAddress
 } from '@glif/react-components'
-import styled from 'styled-components'
 import { PAGE } from '../../constants'
 import ExplorerPage from './ExplorerPage'
 
