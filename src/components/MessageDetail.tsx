@@ -4,27 +4,25 @@ import {
   OneColumn,
   PageTitle
 } from '@glif/react-components'
-import { utils } from 'ethers'
+import { isHexString } from '../utils'
 import ExplorerPage from './ExplorerPage'
 
-export function MessageDetail({ cidOrTxHash }: MessageProps) {
-  const hasCIDOrTxHash = !!cidOrTxHash
-  const validCIDHash =
-    hasCIDOrTxHash &&
-    (validateCID(cidOrTxHash) || utils.isHexString(cidOrTxHash))
+export function MessageDetail({ txID }: MessageProps) {
+  const hasTxID = !!txID
+  const validTxID = hasTxID && (validateCID(txID) || isHexString(txID))
   return (
     <ExplorerPage>
-      {validCIDHash ? (
+      {validTxID ? (
         <OneColumn>
-          <MessageDetailComp cid={cidOrTxHash} />
+          <MessageDetailComp txID={txID} />
         </OneColumn>
-      ) : hasCIDOrTxHash ? (
+      ) : hasTxID ? (
         <OneColumn>
           <PageTitle>
             It seems like you&apos;re looking for an invalid message CID or tx
             hash
           </PageTitle>
-          <h3>&ldquo;{cidOrTxHash}&rdquo;</h3>
+          <h3>&ldquo;{txID}&rdquo;</h3>
           <p>
             Enter another address, message CID, or tx hash in the search bar
             above
@@ -42,5 +40,5 @@ export function MessageDetail({ cidOrTxHash }: MessageProps) {
 }
 
 type MessageProps = {
-  cidOrTxHash: string
+  txID: string
 }
