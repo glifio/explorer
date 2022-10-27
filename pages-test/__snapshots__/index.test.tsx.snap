@@ -430,7 +430,7 @@ exports[`IndexPage it renders correctly 1`] = `
           class="c10 c11"
         >
           <h2>
-            Search for an address or a message CID
+            Search for an address, message CID, or transaction hash
           </h2>
           <div
             class="c12"
@@ -440,7 +440,7 @@ exports[`IndexPage it renders correctly 1`] = `
                 autocomplete="on"
                 class="large"
                 name="search-address-message"
-                placeholder="Enter an address or message CID"
+                placeholder="Enter an address, message CID or tx hash"
                 type="search"
                 value=""
               />

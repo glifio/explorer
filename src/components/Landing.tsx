@@ -33,19 +33,17 @@ export default function Landing() {
           large
         />
         <LandingPageContent>
-          <h2>Search for an address or a message CID</h2>
+          <h2>Search for an address, message CID, or transaction hash</h2>
           <SearchAddressMessage
             large
             onSearchAddress={(address) =>
               navigate(router, {
-                pageUrl: PAGE.ACTOR,
-                params: { address }
+                pageUrl: `${PAGE.ADDRESS}/${address}`
               })
             }
-            onSearchMessage={(cid) =>
+            onSearchMessage={(txID) =>
               navigate(router, {
-                pageUrl: PAGE.MESSAGE,
-                params: { cid }
+                pageUrl: `${PAGE.TX}/${txID}`
               })
             }
           />

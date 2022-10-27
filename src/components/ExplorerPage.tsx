@@ -27,14 +27,12 @@ export default function ExplorerPage({ children, ...rest }: PageProps) {
             hideErrorMessage
             onSearchAddress={(address) =>
               navigate(router, {
-                pageUrl: PAGE.ACTOR,
-                params: { address }
+                pageUrl: `${PAGE.ADDRESS}/${address}`
               })
             }
-            onSearchMessage={(cid) =>
+            onSearchMessage={(txID) =>
               navigate(router, {
-                pageUrl: PAGE.MESSAGE,
-                params: { cid }
+                pageUrl: `${PAGE.TX}/${txID}`
               })
             }
           />
