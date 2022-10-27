@@ -69,14 +69,14 @@ jobs:
           SENTRY_DSN: 'https://d5cec97f452d46f2abd04dffaf425f25@o1126745.ingest.sentry.io/6187874'
           SENTRY_ENV: 'mainnet'
 
-      - name: Deploy-cloudflare
-        run: |
-          npm i -g @cloudflare/wrangler
-          npm run publish:mainnet
-        env:
-          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-          CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
-          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+      # - name: Deploy-cloudflare
+      #   run: |
+      #     npm i -g @cloudflare/wrangler
+      #     npm run publish:mainnet
+      #   env:
+      #     CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+      #     CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
+      #     CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
 
       - name: Changelog
         uses: scottbrenner/generate-changelog-action@master
