@@ -440,7 +440,7 @@ exports[`IndexPage it renders correctly 1`] = `
                 autocomplete="on"
                 class="large"
                 name="search-address-message"
-                placeholder="Enter an address or message CID"
+                placeholder="Enter an address, message CID or tx hash"
                 type="search"
                 value=""
               />
@@ -500,9 +500,7 @@ exports[`IndexPage it renders correctly 1`] = `
         clip-rule="evenodd"
         fill="var(--white)"
         fill-rule="evenodd"
-        height="71"
         viewBox="0 0 51 71"
-        width="51"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
