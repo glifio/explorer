@@ -11,7 +11,7 @@
     "lint-fix": "npm run lint -- --fix",
     "start": "next start",
     "store-ipfs": "npx @glif/deployment-cli ipfs ./out $WEB3_STORAGE_TOKEN",
-    "test": "jest --detectOpenHandles --forceExit",
+    "test": "NODE_ENV=test jest --detectOpenHandles --forceExit",
     "test:watch": "jest --watch",
     "export": "next build && next export",
     "serve": "npx serve ./out",
