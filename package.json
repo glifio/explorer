@@ -22,6 +22,7 @@
   "dependencies": {
     "@apollo/client": "^3.6.9",
     "@glif/base-css": "^0.0.33",
+    "@glif/filecoin-actor-utils": "^2.0.26",
     "@glif/filecoin-address": "^2.0.18",
     "@glif/filecoin-message": "^2.0.18",
     "@glif/filecoin-number": "^2.0.5",
