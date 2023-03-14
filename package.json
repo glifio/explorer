@@ -22,12 +22,11 @@
   "dependencies": {
     "@apollo/client": "^3.6.9",
     "@glif/base-css": "^0.0.33",
-    "@glif/filecoin-actor-utils": "^2.0.38",
-    "@glif/filecoin-address": "^2.0.37",
-    "@glif/filecoin-message": "^2.0.37",
-    "@glif/filecoin-number": "^2.0.34",
+    "@glif/filecoin-address": "^2.0.43",
+    "@glif/filecoin-message": "^2.0.44",
+    "@glif/filecoin-number": "^2.0.45",
     "@glif/logger": "^2.0.1",
-    "@glif/react-components": "^2.1.12",
+    "@glif/react-components": "^2.1.14",
     "ethers": "^5.7.2",
     "next": "^12.2.3",
     "prop-types": "^15.8.1",
@@ -38,7 +37,7 @@
     "wagmi": "^0.7.5"
   },
   "devDependencies": {
-    "@glif/deployment-cli": "^2.0.1",
+    "@glif/deployment-cli": "^2.0.44",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.5",
     "@testing-library/react-hooks": "^8.0.1",
