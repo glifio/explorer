@@ -26,7 +26,6 @@
     "@glif/filecoin-message": "^2.0.44",
     "@glif/filecoin-number": "^2.0.57",
     "@glif/logger": "^2.0.1",
-    "@glif/react-components": "^2.1.20",
     "ethers": "^5.7.2",
     "next": "^12.2.3",
     "prop-types": "^15.8.1",
