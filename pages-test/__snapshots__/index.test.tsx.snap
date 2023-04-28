@@ -608,7 +608,7 @@ exports[`IndexPage it renders correctly 1`] = `
           class="c18"
         >
           <a
-            href="https://explorer-calibration.glif.link"
+            href="https://explorer.glif.io/calibration"
             rel="noreferrer noopener"
             target="_blank"
           >
